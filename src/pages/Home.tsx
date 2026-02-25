@@ -10,6 +10,7 @@ export default function Home() {
   const [filters, setFilters] = useState<FilterState>(defaultFilters);
   const [showForm, setShowForm] = useState(false);
   const [panelOpen, setPanelOpen] = useState(false);
+  const [showParcels, setShowParcels] = useState(false);
 
   const filtered = applyFilters(allProperties, filters);
 
@@ -17,7 +18,7 @@ export default function Home() {
     <div className="pt-16 h-screen flex flex-col">
       <div className="relative flex-1">
         {/* Full-screen map */}
-        <PropertyMap properties={filtered} />
+        <PropertyMap properties={filtered} showParcels={showParcels} />
 
         {/* Desktop sidebar */}
         <div className="hidden md:block absolute top-4 left-4 z-10 w-80">
@@ -27,7 +28,7 @@ export default function Home() {
             </h1>
             <p className="text-white/60 text-xs mb-4">Panama's fastest-growing beach town</p>
 
-            <MapFilters filters={filters} onChange={setFilters} />
+            <MapFilters filters={filters} onChange={setFilters} showParcels={showParcels} onToggleParcels={setShowParcels} />
 
             <p className="text-white/50 text-xs mt-3">{filtered.length} of {allProperties.length} properties</p>
 
@@ -70,7 +71,7 @@ export default function Home() {
 
           {/* Panel content */}
           <div className={`overflow-y-auto px-4 pb-6 ${panelOpen ? 'block' : 'hidden'}`} style={{ maxHeight: 'calc(70vh - 3.5rem)' }}>
-            <MapFilters filters={filters} onChange={setFilters} />
+            <MapFilters filters={filters} onChange={setFilters} showParcels={showParcels} onToggleParcels={setShowParcels} />
             <button
               onClick={() => setShowForm(!showForm)}
               className="mt-4 w-full bg-[#D4A843] text-[#0C2340] font-semibold px-4 py-2.5 rounded-lg text-sm"

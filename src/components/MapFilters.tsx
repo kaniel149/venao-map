@@ -13,6 +13,8 @@ interface Props {
   onChange: (f: FilterState) => void;
   collapsed?: boolean;
   onToggle?: () => void;
+  showParcels?: boolean;
+  onToggleParcels?: (v: boolean) => void;
 }
 
 const MAX_PRICE = 6000000;
@@ -24,7 +26,7 @@ export const defaultFilters: FilterState = {
   search: '',
 };
 
-export default function MapFilters({ filters, onChange, collapsed, onToggle }: Props) {
+export default function MapFilters({ filters, onChange, collapsed, onToggle, showParcels, onToggleParcels }: Props) {
   const [, setLocalMax] = useState(String(filters.priceRange[1] >= MAX_PRICE ? '' : filters.priceRange[1]));
 
   const toggleStatus = (s: string) => {
@@ -112,6 +114,21 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle }: P
             <span>$6M+</span>
           </div>
         </div>
+
+        {/* Parcel overlay toggle */}
+        {onToggleParcels !== undefined && (
+          <div>
+            <label className="flex items-center gap-2 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={showParcels ?? false}
+                onChange={e => onToggleParcels!(e.target.checked)}
+                className="accent-[#D4A843] w-3.5 h-3.5"
+              />
+              <span className="text-white/80 text-xs">Show Parcels</span>
+            </label>
+          </div>
+        )}
       </div>
     </div>
   );

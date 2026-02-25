@@ -3,6 +3,7 @@ import L from 'leaflet';
 import { Link } from 'react-router-dom';
 import type { Property } from '../data/properties';
 import { statusColors, statusLabels, formatPrice, typeLabels } from '../data/properties';
+import ParcelLayer from './ParcelLayer';
 
 function createIcon(color: string) {
   return L.divIcon({
@@ -22,9 +23,10 @@ interface Props {
   height?: string;
   center?: [number, number];
   zoom?: number;
+  showParcels?: boolean;
 }
 
-export default function PropertyMap({ properties, height = '100%', center = [7.4350, -80.1920], zoom = 14 }: Props) {
+export default function PropertyMap({ properties, height = '100%', center = [7.4350, -80.1920], zoom = 14, showParcels = false }: Props) {
   return (
     <div style={{ height, width: '100%' }}>
       <MapContainer center={center} zoom={zoom} style={{ height: '100%', width: '100%' }} scrollWheelZoom={true}>
@@ -42,6 +44,7 @@ export default function PropertyMap({ properties, height = '100%', center = [7.4
             />
           </LayersControl.BaseLayer>
         </LayersControl>
+        <ParcelLayer visible={showParcels} />
         {properties.map(p => (
           <Marker key={p.id} position={[p.lat, p.lng]} icon={createIcon(statusColors[p.status])}>
             <Popup maxWidth={320}>
