@@ -24,7 +24,7 @@ interface Props {
   zoom?: number;
 }
 
-export default function PropertyMap({ properties, height = '100%', center = [7.4400, -80.1500], zoom = 12 }: Props) {
+export default function PropertyMap({ properties, height = '100%', center = [7.4350, -80.1920], zoom = 14 }: Props) {
   return (
     <div style={{ height, width: '100%' }}>
       <MapContainer center={center} zoom={zoom} style={{ height: '100%', width: '100%' }} scrollWheelZoom={true}>

@@ -618,6 +618,40 @@ export const properties: Property[] = [
     agent_name: 'Tropic Lands', agent_phone: '+507 6000-0004', agent_email: 'info@tropiclandspanama.com',
     source: 'Tropic Lands', created_at: '2023-01-01'
   },
+
+  // ══════════════════════════════════════════════════════════
+  // VILLA MARINA LODGE & CONDOS
+  // ══════════════════════════════════════════════════════════
+  {
+    id: '53', title: 'Villa Marina Lodge & Condos — Operating Hotel',
+    description: 'Beachfront hotel & condo complex. 7.5 acres. Hotel rooms + furnished condos (109-181 m²). Infinity pool, restaurant. Managed by VerdeAzul Hotels.',
+    type: 'commercial', status: 'rented', price: 0, currency: 'USD',
+    size_sqm: 3000, land_size_sqm: 30000, lat: 7.4319, lng: -80.1914, address: 'Playa Venao Beachfront',
+    owner: 'VerdeAzul Hotels', notes: 'Website: villamarina.com.pa. 6 low-density condo buildings. Condos from $630K.',
+    images: ['https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'],
+    agent_name: 'Villa Marina / Open Doors Panama', agent_phone: '+507 307-0243', agent_email: 'reservations@villamarina.com.pa',
+    source: 'villamarina.com.pa', created_at: '2021-01-01'
+  },
+  {
+    id: '54', title: 'Villa Marina — 2BD Ocean View Condo',
+    description: '2-bedroom ocean view condo, 109 m². Fully furnished. Part of Villa Marina complex.',
+    type: 'condo', status: 'for_sale', price: 450000, currency: 'USD',
+    size_sqm: 109, bedrooms: 2, bathrooms: 2, year_built: 2021,
+    lat: 7.4316, lng: -80.1917, address: 'Villa Marina, Playa Venao',
+    images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'],
+    agent_name: 'Open Doors Panama', agent_phone: '', agent_email: 'info@opendoorspanama.com',
+    source: 'villamarina.com.pa', created_at: '2024-06-01'
+  },
+  {
+    id: '55', title: 'Villa Marina — 3BD Beachfront Condo ($630K)',
+    description: '3BD/2BA beachfront condo, 180 m². Fully furnished, turnkey. Built 2021. Strong rental history.',
+    type: 'condo', status: 'for_sale', price: 630000, currency: 'USD',
+    size_sqm: 180, bedrooms: 3, bathrooms: 2, year_built: 2021,
+    lat: 7.4321, lng: -80.1911, address: 'Villa Marina, Playa Venao',
+    images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'],
+    agent_name: 'Open Doors Panama', agent_phone: '', agent_email: 'info@opendoorspanama.com',
+    source: 'Open Doors Panama', created_at: '2024-05-01'
+  },
 ];
 
 export const statusColors: Record<string, string> = {
