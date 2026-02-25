@@ -143,7 +143,7 @@ export const properties: Property[] = [
     description: '7-bedroom property on 4.6 hectares (46,000 m²). Massive estate with development potential.',
     type: 'house', status: 'for_sale', price: 1800000, currency: 'USD',
     size_sqm: 2000, land_size_sqm: 46000, bedrooms: 7, bathrooms: 5,
-    lat: 7.4280, lng: -80.1960, address: 'Playa Venao Hillside',
+    lat: 7.4370, lng: -80.1960, address: 'Playa Venao Hillside',
     images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
     agent_name: 'Le Figaro Properties', agent_phone: '+507 6000-0003', agent_email: 'info@lefigaro.com',
     source: 'Le Figaro', created_at: '2024-03-01'
@@ -153,7 +153,7 @@ export const properties: Property[] = [
     description: '4-bedroom, 4-bath home. 380 m² on 1,710 m² lot. Premium finishes.',
     type: 'house', status: 'for_sale', price: 998000, currency: 'USD',
     size_sqm: 380, land_size_sqm: 1710, bedrooms: 4, bathrooms: 4,
-    lat: 7.4310, lng: -80.1920, address: 'Playa Venao',
+    lat: 7.4335, lng: -80.1920, address: 'Playa Venao',
     images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
     source: 'Casa Solution', created_at: '2024-04-01'
@@ -163,7 +163,7 @@ export const properties: Property[] = [
     description: 'Modern 3-bedroom villa with large plot. Great for expansion.',
     type: 'house', status: 'for_sale', price: 875000, currency: 'USD',
     size_sqm: 250, land_size_sqm: 2900, bedrooms: 3, bathrooms: 3,
-    lat: 7.4305, lng: -80.1930, address: 'Playa Venao',
+    lat: 7.4345, lng: -80.1930, address: 'Playa Venao',
     images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
     source: 'Casa Solution', created_at: '2024-05-01'
@@ -183,7 +183,7 @@ export const properties: Property[] = [
     description: 'Stunning ocean view home listed by Circa Panama.',
     type: 'house', status: 'for_sale', price: 400000, currency: 'USD',
     size_sqm: 180, land_size_sqm: 600, bedrooms: 3, bathrooms: 2,
-    lat: 7.4315, lng: -80.1945, address: 'Playa Venao',
+    lat: 7.4338, lng: -80.1945, address: 'Playa Venao',
     images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'],
     agent_name: 'Circa Panama', agent_phone: '+507 6169-2453', agent_email: 'info@circapanama.com',
     source: 'Circa Panama', created_at: '2024-08-01'
@@ -201,7 +201,7 @@ export const properties: Property[] = [
     id: '13', title: 'Large Ocean View Lots — $100/m²',
     description: '900 m² ocean view lots. Multiple available.',
     type: 'land', status: 'for_sale', price: 90000, currency: 'USD',
-    size_sqm: 900, land_size_sqm: 900, lat: 7.4295, lng: -80.1935, address: 'Playa Venao Hills',
+    size_sqm: 900, land_size_sqm: 900, lat: 7.4355, lng: -80.1935, address: 'Playa Venao Hills',
     notes: '$100/m² — multiple lots available',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
@@ -212,7 +212,7 @@ export const properties: Property[] = [
     description: 'Beautiful loft, 1 bed, 1.5 bath, 78 m². Modern design in hillside community.',
     type: 'condo', status: 'for_sale', price: 270000, currency: 'USD',
     size_sqm: 78, bedrooms: 1, bathrooms: 1,
-    lat: 7.4290, lng: -80.1910, address: 'Loma de Venao',
+    lat: 7.4340, lng: -80.1910, address: 'Loma de Venao',
     images: ['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
     source: 'Love Your Land', created_at: '2024-05-01'
@@ -221,7 +221,7 @@ export const properties: Property[] = [
     id: '15', title: 'Las Palmas Venao — Pre-Sale Land',
     description: '600 m² lot in Las Palmas Venao development. Pre-sale pricing.',
     type: 'land', status: 'for_sale', price: 130000, currency: 'USD',
-    size_sqm: 600, land_size_sqm: 600, lat: 7.4300, lng: -80.1900, address: 'Las Palmas, Playa Venao',
+    size_sqm: 600, land_size_sqm: 600, lat: 7.4335, lng: -80.1900, address: 'Las Palmas, Playa Venao',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
     source: 'Love Your Land', created_at: '2024-09-01'
@@ -355,7 +355,7 @@ export const properties: Property[] = [
     id: '27', title: 'Prime Ocean/Jungle View Lot — 8,000 m²',
     description: '8,000 m² titled land with ocean and jungle views. Utilities at lot line.',
     type: 'land', status: 'for_sale', price: 215000, currency: 'USD',
-    size_sqm: 8000, land_size_sqm: 8000, lat: 7.4280, lng: -80.1910, address: 'Venao Hills',
+    size_sqm: 8000, land_size_sqm: 8000, lat: 7.4365, lng: -80.1910, address: 'Venao Hills',
     images: ['https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800'],
     agent_name: 'Panama Sovereign', agent_phone: '+507 6619-6669', agent_email: 'info@panamasovereign.com',
     source: 'Encuentra24', created_at: '2024-02-15'
@@ -365,7 +365,7 @@ export const properties: Property[] = [
     description: 'Tuscany-style villa on 7,455 m² land. 10 min from Venao. Tranquil setting.',
     type: 'house', status: 'for_sale', price: 0, currency: 'USD',
     size_sqm: 300, land_size_sqm: 7455, bedrooms: 3, bathrooms: 2,
-    lat: 7.4270, lng: -80.1950, address: 'Near Playa Venao',
+    lat: 7.4375, lng: -80.1950, address: 'Near Playa Venao',
     notes: 'Price on request. Listed by Love Your Land Panama.',
     images: ['https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
@@ -375,7 +375,7 @@ export const properties: Property[] = [
     id: '29', title: 'Eco Lodge — Operating Business',
     description: 'Operating eco-lodge with 8 rooms, restaurant, yoga deck. Strong bookings.',
     type: 'commercial', status: 'for_sale', price: 1800000, currency: 'USD',
-    size_sqm: 800, land_size_sqm: 3000, lat: 7.4285, lng: -80.1940, address: 'Playa Venao Inland',
+    size_sqm: 800, land_size_sqm: 3000, lat: 7.4360, lng: -80.1940, address: 'Playa Venao Inland',
     images: ['https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'],
     agent_name: 'Panama Equity', agent_phone: '+507 6000-0002', agent_email: 'info@panamaequity.com',
     source: 'Panama Equity', created_at: '2024-01-10'
@@ -571,7 +571,7 @@ export const properties: Property[] = [
     id: '48', title: 'Beachfront Lot — Cambutal',
     description: 'Rare beachfront lot in quiet Cambutal. 3,000 m², titled.',
     type: 'land', status: 'for_sale', price: 180000, currency: 'USD',
-    size_sqm: 3000, land_size_sqm: 3000, lat: 7.4150, lng: -80.2350, address: 'Playa Cambutal',
+    size_sqm: 3000, land_size_sqm: 3000, lat: 7.4200, lng: -80.2350, address: 'Playa Cambutal',
     images: ['https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800'],
     agent_name: 'Tropic Lands', agent_phone: '+507 6000-0004', agent_email: 'info@tropiclandspanama.com',
     source: 'Tropic Lands', created_at: '2024-06-01'
@@ -581,7 +581,7 @@ export const properties: Property[] = [
     description: '2BD off-grid eco cabin on 5,000 m². Solar powered. 10 min walk to beach.',
     type: 'house', status: 'for_sale', price: 275000, currency: 'USD',
     size_sqm: 100, land_size_sqm: 5000, bedrooms: 2, bathrooms: 1, year_built: 2021,
-    lat: 7.4170, lng: -80.2300, address: 'Cambutal Jungle',
+    lat: 7.4230, lng: -80.2300, address: 'Cambutal Jungle',
     images: ['https://images.unsplash.com/photo-1499793983394-12903e570d0b?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
     source: 'Casa Solution', created_at: '2024-04-15'
