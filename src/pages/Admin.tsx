@@ -136,6 +136,8 @@ function AddPropertyForm({ onSave }: { onSave: () => void }) {
       agent_phone: form.agent_phone || '',
       agent_email: form.agent_email || '',
       created_at: new Date().toISOString(),
+      verified: false,
+      verifiedStatus: 'uncertain',
     };
     saveProperty(p);
     onSave();

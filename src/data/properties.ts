@@ -23,6 +23,8 @@ export interface Property {
   agent_email: string;
   source?: string;
   created_at: string;
+  verified: boolean;
+  verifiedStatus: 'verified' | 'high' | 'uncertain';
 }
 
 export interface Lead {
@@ -90,7 +92,8 @@ export const properties: Property[] = [
     lat: 7.4338, lng: -80.1955, address: 'Playa Venao Beachfront',
     notes: 'Also listed by Love Your Land Panama at $2.1M', images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
     agent_name: 'Le Figaro Properties', agent_phone: '+507 6000-0003', agent_email: 'info@lefigaro.com',
-    source: 'Le Figaro / Love Your Land', created_at: '2024-01-15'
+    source: 'Le Figaro / Love Your Land', created_at: '2024-01-15',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '2', title: 'Resort Playa Venao — Main Complex',
@@ -99,7 +102,8 @@ export const properties: Property[] = [
     size_sqm: 2000, land_size_sqm: 8000, lat: 7.43266, lng: -80.19329, address: 'Playa Venao Beach',
     owner: 'Ami & Uri', purchase_date: '~2010', notes: 'Not for sale. Operating resort + Tipi buildings behind.',
     images: ['https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'],
-    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2010-01-01'
+    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2010-01-01',
+    verified: true, verifiedStatus: 'verified',
   },
   {
     id: '3', title: 'Tipi Complex — Behind Resort (Solaris POC)',
@@ -108,7 +112,8 @@ export const properties: Property[] = [
     size_sqm: 1500, land_size_sqm: 5000, lat: 7.4335, lng: -80.1928, address: 'Behind Resort Playa Venao',
     owner: 'Ami & Uri', notes: 'Solaris Energy 300kW POC installation.',
     images: ['https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800'],
-    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2010-01-01'
+    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2010-01-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '4', title: 'Kaniel & Omri — Beachfront Lot',
@@ -118,7 +123,8 @@ export const properties: Property[] = [
     owner: 'Kaniel & Omri', purchase_date: '2025', notes: 'Not for sale. Private investment.',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Kaniel & Omri', agent_phone: '+507 6583-1822', agent_email: 'k@kanielt.com',
-    source: 'Direct', created_at: '2025-01-01'
+    source: 'Direct', created_at: '2025-01-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '5', title: 'Beachfront Land — Rare Opportunity',
@@ -127,7 +133,8 @@ export const properties: Property[] = [
     size_sqm: 1511, land_size_sqm: 1511, lat: 7.4325, lng: -80.196, address: 'Playa Venao Beachfront',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
-    source: 'Panama Properties', created_at: '2024-06-01'
+    source: 'Panama Properties', created_at: '2024-06-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '6', title: 'Luxury 6BD Estate — $5.2M',
@@ -137,7 +144,8 @@ export const properties: Property[] = [
     lat: 7.4348, lng: -80.194, address: 'Playa Venao Beachfront',
     images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
     agent_name: 'Le Figaro Properties', agent_phone: '+507 6000-0003', agent_email: 'info@lefigaro.com',
-    source: 'Le Figaro', created_at: '2024-02-01'
+    source: 'Le Figaro', created_at: '2024-02-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '7', title: '7BD Estate on 4.6 Ha',
@@ -147,7 +155,8 @@ export const properties: Property[] = [
     lat: 7.438, lng: -80.1975, address: 'Playa Venao Hillside',
     images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
     agent_name: 'Le Figaro Properties', agent_phone: '+507 6000-0003', agent_email: 'info@lefigaro.com',
-    source: 'Le Figaro', created_at: '2024-03-01'
+    source: 'Le Figaro', created_at: '2024-03-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '8', title: 'Luxurious 4BD Home — $998K',
@@ -157,7 +166,8 @@ export const properties: Property[] = [
     lat: 7.434, lng: -80.1925, address: 'Playa Venao',
     images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
-    source: 'Casa Solution', created_at: '2024-04-01'
+    source: 'Casa Solution', created_at: '2024-04-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '9', title: 'Modern 3BD Villa on 2,900 m²',
@@ -167,7 +177,8 @@ export const properties: Property[] = [
     lat: 7.4355, lng: -80.1945, address: 'Playa Venao',
     images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
-    source: 'Casa Solution', created_at: '2024-05-01'
+    source: 'Casa Solution', created_at: '2024-05-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '10', title: 'Beach House — $640K (Price Drop)',
@@ -177,7 +188,8 @@ export const properties: Property[] = [
     lat: 7.4335, lng: -80.1915, address: 'Playa Venao',
     images: ['https://images.unsplash.com/photo-1499793983394-12903e570d0b?w=800'],
     agent_name: 'Metro Realty', agent_phone: '+507 6000-0001', agent_email: 'info@metrorealtypanama.com',
-    source: 'Metro Realty', created_at: '2024-04-01'
+    source: 'Metro Realty', created_at: '2024-04-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '11', title: 'Ocean View Home — $400K (Circa)',
@@ -187,7 +199,8 @@ export const properties: Property[] = [
     lat: 7.4345, lng: -80.196, address: 'Playa Venao',
     images: ['https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800'],
     agent_name: 'Circa Panama', agent_phone: '+507 6169-2453', agent_email: 'info@circapanama.com',
-    source: 'Circa Panama', created_at: '2024-08-01'
+    source: 'Circa Panama', created_at: '2024-08-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '12', title: 'Sea-View Lot — Venao West',
@@ -196,7 +209,8 @@ export const properties: Property[] = [
     size_sqm: 3909, land_size_sqm: 3909, lat: 7.436, lng: -80.199, address: 'Venao West',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
-    source: 'Casa Solution', created_at: '2024-06-01'
+    source: 'Casa Solution', created_at: '2024-06-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '13', title: 'Large Ocean View Lots — $100/m²',
@@ -206,7 +220,8 @@ export const properties: Property[] = [
     notes: '$100/m² — multiple lots available',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
-    source: 'Panama Properties', created_at: '2024-07-01'
+    source: 'Panama Properties', created_at: '2024-07-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '14', title: 'Loft in Loma de Venao',
@@ -216,7 +231,8 @@ export const properties: Property[] = [
     lat: 7.437, lng: -80.192, address: 'Loma de Venao',
     images: ['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
-    source: 'Love Your Land', created_at: '2024-05-01'
+    source: 'Love Your Land', created_at: '2024-05-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '15', title: 'Las Palmas Venao — Pre-Sale Land',
@@ -225,7 +241,8 @@ export const properties: Property[] = [
     size_sqm: 600, land_size_sqm: 600, lat: 7.4375, lng: -80.1905, address: 'Las Palmas, Playa Venao',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
-    source: 'Love Your Land', created_at: '2024-09-01'
+    source: 'Love Your Land', created_at: '2024-09-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '16', title: 'Beachfront Exclusivity — 5,000 m²',
@@ -234,7 +251,8 @@ export const properties: Property[] = [
     size_sqm: 5000, land_size_sqm: 5000, lat: 7.434, lng: -80.198, address: 'Playa Venao Beachfront',
     images: ['https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
-    source: 'Love Your Land', created_at: '2024-08-01'
+    source: 'Love Your Land', created_at: '2024-08-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -247,7 +265,8 @@ export const properties: Property[] = [
     size_sqm: 1000, land_size_sqm: 3000, lat: 7.43069, lng: -80.18892, address: 'East of Playa Venao Beach',
     owner: 'Selina / Dekel Group (Rafi & Daniel)', notes: 'Selina brand, owned by Dekel Group. Potential solar client.',
     images: ['https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'],
-    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2018-01-01'
+    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2018-01-01',
+    verified: true, verifiedStatus: 'verified',
   },
   {
     id: '18', title: 'The Point — Luxury Development (Dekel Group)',
@@ -257,7 +276,8 @@ export const properties: Property[] = [
     owner: 'Dekel Group (Rafi & Daniel)', notes: 'LP structure: 8% per $1M invested, GP takes 30% success fee. Finder fee: 4% of LP per $1M sales. Total $12M raise.',
     images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
     agent_name: 'Dekel Group (Rafi & Daniel)', agent_phone: '', agent_email: '',
-    source: 'Omri (via WhatsApp)', created_at: '2026-02-23'
+    source: 'Omri (via WhatsApp)', created_at: '2026-02-23',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '19', title: 'The Point Hotel Area',
@@ -266,7 +286,8 @@ export const properties: Property[] = [
     size_sqm: 500, land_size_sqm: 1500, lat: 7.43266, lng: -80.19329, address: 'Playa Venao NW',
     owner: 'Unknown', notes: 'Operating hotel. Potential solar client.',
     images: ['https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'],
-    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2019-01-01'
+    agent_name: 'N/A', agent_phone: '', agent_email: '', source: 'Direct', created_at: '2019-01-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -280,7 +301,8 @@ export const properties: Property[] = [
     lat: 7.4318, lng: -80.19, address: 'Blue Venao, Playa Venao',
     images: ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
-    source: 'Panama Properties / Circa', created_at: '2024-06-01'
+    source: 'Panama Properties / Circa', created_at: '2024-06-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '21', title: 'Blue Venao — Beach Club Apartments',
@@ -291,7 +313,8 @@ export const properties: Property[] = [
     notes: 'Range: $355,600-$562,300 depending on unit size',
     images: ['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800'],
     agent_name: 'Metro Realty', agent_phone: '+507 6000-0001', agent_email: 'info@metrorealtypanama.com',
-    source: 'Metro Realty', created_at: '2024-03-01'
+    source: 'Metro Realty', created_at: '2024-03-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '22', title: 'Blue Venao — Income Generating Condo',
@@ -301,7 +324,8 @@ export const properties: Property[] = [
     lat: 7.432, lng: -80.1898, address: 'Blue Venao',
     images: ['https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800'],
     agent_name: 'Circa Panama', agent_phone: '+507 6169-2453', agent_email: 'info@circapanama.com',
-    source: 'Circa Panama', created_at: '2024-09-01'
+    source: 'Circa Panama', created_at: '2024-09-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '23', title: 'Playa Venao Beach Condos — 56-Unit Complex',
@@ -312,7 +336,8 @@ export const properties: Property[] = [
     notes: '56-unit complex. Multiple sizes available.',
     images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'],
     agent_name: 'Panama Equity', agent_phone: '+507 6000-0002', agent_email: 'info@panamaequity.com',
-    source: 'Panama Equity', created_at: '2024-04-01'
+    source: 'Panama Equity', created_at: '2024-04-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '24', title: 'Villa Marina Condo — Beachfront Turnkey',
@@ -322,7 +347,8 @@ export const properties: Property[] = [
     lat: 7.4262, lng: -80.1858, address: 'Playa Venao Beachfront',
     images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'],
     agent_name: 'Open Doors Panama', agent_phone: '', agent_email: 'info@opendoorspanama.com',
-    source: 'Open Doors Panama', created_at: '2024-05-01'
+    source: 'Open Doors Panama', created_at: '2024-05-01',
+    verified: true, verifiedStatus: 'high',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -336,7 +362,8 @@ export const properties: Property[] = [
     lat: 7.4495, lng: -80.1845, address: 'Hermitage Hills, Playa Venao',
     images: ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800'],
     agent_name: 'Stay in Venao', agent_phone: '+507 6511-7166', agent_email: 'info@stayinvenao.com',
-    source: 'Stay in Venao / Casa Solution', created_at: '2024-02-01'
+    source: 'Stay in Venao / Casa Solution', created_at: '2024-02-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '26', title: 'Hermitage Hills — Caoba Villa',
@@ -346,7 +373,8 @@ export const properties: Property[] = [
     lat: 7.4505, lng: -80.1855, address: 'Hermitage Hills, Playa Venao',
     images: ['https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'],
     agent_name: 'Stay in Venao', agent_phone: '+507 6511-7166', agent_email: 'info@stayinvenao.com',
-    source: 'Stay in Venao / Casa Solution', created_at: '2024-02-01'
+    source: 'Stay in Venao / Casa Solution', created_at: '2024-02-01',
+    verified: true, verifiedStatus: 'high',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -359,7 +387,8 @@ export const properties: Property[] = [
     size_sqm: 8000, land_size_sqm: 8000, lat: 7.4375, lng: -80.193, address: 'Venao Hills',
     images: ['https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800'],
     agent_name: 'Panama Sovereign', agent_phone: '+507 6619-6669', agent_email: 'info@panamasovereign.com',
-    source: 'Encuentra24', created_at: '2024-02-15'
+    source: 'Encuentra24', created_at: '2024-02-15',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '28', title: 'Finca & Casa Papu — Tuscany-Style Villa',
@@ -370,7 +399,8 @@ export const properties: Property[] = [
     notes: 'Price on request. Listed by Love Your Land Panama.',
     images: ['https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
-    source: 'Love Your Land', created_at: '2024-06-01'
+    source: 'Love Your Land', created_at: '2024-06-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '29', title: 'Eco Lodge — Operating Business',
@@ -379,7 +409,8 @@ export const properties: Property[] = [
     size_sqm: 800, land_size_sqm: 3000, lat: 7.4358, lng: -80.201, address: 'Playa Venao Inland',
     images: ['https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'],
     agent_name: 'Panama Equity', agent_phone: '+507 6000-0002', agent_email: 'info@panamaequity.com',
-    source: 'Panama Equity', created_at: '2024-01-10'
+    source: 'Panama Equity', created_at: '2024-01-10',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '30', title: 'New Construction — Mountain View Villa',
@@ -389,7 +420,8 @@ export const properties: Property[] = [
     lat: 7.438, lng: -80.1895, address: 'Venao Heights',
     images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
     agent_name: 'Aura Real Estate', agent_phone: '+507 6000-0000', agent_email: 'info@aurarealestate.com',
-    source: 'Aura Real Estate', created_at: '2024-06-15'
+    source: 'Aura Real Estate', created_at: '2024-06-15',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -402,7 +434,8 @@ export const properties: Property[] = [
     size_sqm: 181404, land_size_sqm: 181404, lat: 7.445, lng: -80.185, address: 'Main Road to Playa Venao',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
-    source: 'Panama Properties', created_at: '2024-09-01'
+    source: 'Panama Properties', created_at: '2024-09-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '32', title: 'Res/Commercial Lot — Road to Venao',
@@ -411,7 +444,8 @@ export const properties: Property[] = [
     size_sqm: 35000, land_size_sqm: 35000, lat: 7.45, lng: -80.18, address: 'Road to Playa Venao',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
-    source: 'Casa Solution', created_at: '2024-05-01'
+    source: 'Casa Solution', created_at: '2024-05-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '33', title: 'Development Land — 6,000 m² Road to Venao',
@@ -420,7 +454,8 @@ export const properties: Property[] = [
     size_sqm: 6000, land_size_sqm: 6000, lat: 7.455, lng: -80.16, address: 'Pedasi-Venao Road',
     images: ['https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
-    source: 'Casa Solution', created_at: '2024-07-01'
+    source: 'Casa Solution', created_at: '2024-07-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -434,7 +469,8 @@ export const properties: Property[] = [
     lat: 7.4405, lng: -80.175, address: 'Between Venao & Cañas',
     images: ['https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800'],
     agent_name: 'Le Figaro Properties', agent_phone: '+507 6000-0003', agent_email: 'info@lefigaro.com',
-    source: 'Le Figaro', created_at: '2024-03-10'
+    source: 'Le Figaro', created_at: '2024-03-10',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '35', title: 'New 3BD Home — Cañas',
@@ -444,7 +480,8 @@ export const properties: Property[] = [
     lat: 7.442, lng: -80.173, address: 'Cañas, near Playa Venao',
     images: ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
-    source: 'Panama Properties', created_at: '2024-06-01'
+    source: 'Panama Properties', created_at: '2024-06-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '36', title: 'Luxury House — Sanctuary Gardens, Cañas',
@@ -454,7 +491,8 @@ export const properties: Property[] = [
     lat: 7.443, lng: -80.172, address: 'Sanctuary Gardens, Cañas',
     images: ['https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800'],
     agent_name: 'Stay in Venao', agent_phone: '+507 6511-7166', agent_email: 'info@stayinvenao.com',
-    source: 'Encuentra24', created_at: '2024-02-01'
+    source: 'Encuentra24', created_at: '2024-02-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '37', title: 'Prime Ocean View Development Land — Cañas',
@@ -463,7 +501,8 @@ export const properties: Property[] = [
     size_sqm: 10000, land_size_sqm: 10000, lat: 7.444, lng: -80.171, address: 'Cañas',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
-    source: 'Panama Properties', created_at: '2024-08-01'
+    source: 'Panama Properties', created_at: '2024-08-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '38', title: 'Sea View Lots — Cañas del Sol',
@@ -472,7 +511,8 @@ export const properties: Property[] = [
     size_sqm: 6133, land_size_sqm: 6133, lat: 7.4445, lng: -80.17, address: 'Cañas del Sol',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Sovereign', agent_phone: '+507 6619-6669', agent_email: 'info@panamasovereign.com',
-    source: 'Encuentra24', created_at: '2024-04-01'
+    source: 'Encuentra24', created_at: '2024-04-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '39', title: 'Land — Corotu Village, Cañas',
@@ -481,7 +521,8 @@ export const properties: Property[] = [
     size_sqm: 17794, land_size_sqm: 17794, lat: 7.446, lng: -80.169, address: 'Corotu Village, Cañas',
     images: ['https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=800'],
     agent_name: 'Panama Sovereign', agent_phone: '+507 6619-6669', agent_email: 'info@panamasovereign.com',
-    source: 'Encuentra24', created_at: '2024-03-20'
+    source: 'Encuentra24', created_at: '2024-03-20',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '40', title: 'Mega Estate — Cañas Hilltop',
@@ -491,7 +532,8 @@ export const properties: Property[] = [
     lat: 7.447, lng: -80.168, address: 'Cañas Hilltop',
     images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
     agent_name: 'Le Figaro Properties', agent_phone: '+507 6000-0003', agent_email: 'info@lefigaro.com',
-    source: 'Encuentra24', created_at: '2024-01-20'
+    source: 'Encuentra24', created_at: '2024-01-20',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '41', title: 'Ocean View Prime Property — Cañas',
@@ -500,7 +542,8 @@ export const properties: Property[] = [
     size_sqm: 4000, land_size_sqm: 4000, lat: 7.4415, lng: -80.176, address: 'Cañas',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Stay in Venao', agent_phone: '+507 6511-7166', agent_email: 'info@stayinvenao.com',
-    source: 'Stay in Venao', created_at: '2024-11-01'
+    source: 'Stay in Venao', created_at: '2024-11-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '42', title: 'Titled Lots — Cañas (from $35K!)',
@@ -510,7 +553,8 @@ export const properties: Property[] = [
     notes: 'Starting at $35K — cheapest titled lots near Venao',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Circa Panama', agent_phone: '+507 6169-2453', agent_email: 'info@circapanama.com',
-    source: 'Circa Panama / Panama Sovereign', created_at: '2024-10-01'
+    source: 'Circa Panama / Panama Sovereign', created_at: '2024-10-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '43', title: 'Oceanview Lot — Cañas ($250K)',
@@ -519,7 +563,8 @@ export const properties: Property[] = [
     size_sqm: 3000, land_size_sqm: 3000, lat: 7.441, lng: -80.177, address: 'Cañas',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Circa Panama', agent_phone: '+507 6169-2453', agent_email: 'info@circapanama.com',
-    source: 'Circa Panama', created_at: '2024-09-01'
+    source: 'Circa Panama', created_at: '2024-09-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '44', title: 'Sereno de Cañas — 6 Lots ($30/m²)',
@@ -529,7 +574,8 @@ export const properties: Property[] = [
     notes: '$30/m² — 6 lots from $24K to $36K each. Dig well for water.',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
-    source: 'Love Your Land', created_at: '2025-09-09'
+    source: 'Love Your Land', created_at: '2025-09-09',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '45', title: 'Riverhome — Off-Grid Sanctuary, Cañas',
@@ -540,7 +586,8 @@ export const properties: Property[] = [
     notes: 'Price on request. Love Your Land Panama.',
     images: ['https://images.unsplash.com/photo-1499793983394-12903e570d0b?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
-    source: 'Love Your Land', created_at: '2024-07-01'
+    source: 'Love Your Land', created_at: '2024-07-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -553,7 +600,8 @@ export const properties: Property[] = [
     size_sqm: 50009, land_size_sqm: 50009, lat: 7.45, lng: -80.2, address: 'Los Pozos',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Properties', agent_phone: '+507 6169-2453', agent_email: 'info@panama-properties.com',
-    source: 'Panama Properties', created_at: '2024-03-01'
+    source: 'Panama Properties', created_at: '2024-03-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '47', title: '109 Hectares — Mega Land',
@@ -562,7 +610,8 @@ export const properties: Property[] = [
     size_sqm: 1090000, land_size_sqm: 1090000, lat: 7.455, lng: -80.205, address: 'Near Playa Venao',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Love Your Land Panama', agent_phone: '', agent_email: 'info@loveyourlandpanama.com',
-    source: 'Love Your Land', created_at: '2024-08-01'
+    source: 'Love Your Land', created_at: '2024-08-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -575,7 +624,8 @@ export const properties: Property[] = [
     size_sqm: 3000, land_size_sqm: 3000, lat: 7.42, lng: -80.235, address: 'Playa Cambutal',
     images: ['https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800'],
     agent_name: 'Tropic Lands', agent_phone: '+507 6000-0004', agent_email: 'info@tropiclandspanama.com',
-    source: 'Tropic Lands', created_at: '2024-06-01'
+    source: 'Tropic Lands', created_at: '2024-06-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '49', title: 'Eco Cabin — Cambutal Jungle',
@@ -585,7 +635,8 @@ export const properties: Property[] = [
     lat: 7.423, lng: -80.23, address: 'Cambutal Jungle',
     images: ['https://images.unsplash.com/photo-1499793983394-12903e570d0b?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
-    source: 'Casa Solution', created_at: '2024-04-15'
+    source: 'Casa Solution', created_at: '2024-04-15',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -599,7 +650,8 @@ export const properties: Property[] = [
     lat: 7.527, lng: -80.027, address: 'Pedasi Town Center',
     images: ['https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800'],
     agent_name: 'Casa Solution', agent_phone: '+507 6000-0005', agent_email: 'info@casasolution.com',
-    source: 'Casa Solution', created_at: '2024-07-01'
+    source: 'Casa Solution', created_at: '2024-07-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '51', title: 'Farmland — 10 Ha, Between Venao & Pedasi',
@@ -608,7 +660,8 @@ export const properties: Property[] = [
     size_sqm: 100000, land_size_sqm: 100000, lat: 7.47, lng: -80.12, address: 'Between Venao & Pedasi',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Panama Sovereign', agent_phone: '+507 6619-6669', agent_email: 'info@panamasovereign.com',
-    source: 'Panama Sovereign', created_at: '2024-02-10'
+    source: 'Panama Sovereign', created_at: '2024-02-10',
+    verified: false, verifiedStatus: 'uncertain',
   },
   {
     id: '52', title: 'Ocean View Lot — Sold 2024',
@@ -618,7 +671,8 @@ export const properties: Property[] = [
     owner: 'Unknown buyer', purchase_date: '2024',
     images: ['https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800'],
     agent_name: 'Tropic Lands', agent_phone: '+507 6000-0004', agent_email: 'info@tropiclandspanama.com',
-    source: 'Tropic Lands', created_at: '2023-01-01'
+    source: 'Tropic Lands', created_at: '2023-01-01',
+    verified: false, verifiedStatus: 'uncertain',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -632,7 +686,8 @@ export const properties: Property[] = [
     owner: 'VerdeAzul Hotels', notes: 'Website: villamarina.com.pa. 6 low-density condo buildings. Condos from $630K.',
     images: ['https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=800'],
     agent_name: 'Villa Marina / Open Doors Panama', agent_phone: '+507 307-0243', agent_email: 'reservations@villamarina.com.pa',
-    source: 'villamarina.com.pa', created_at: '2021-01-01'
+    source: 'villamarina.com.pa', created_at: '2021-01-01',
+    verified: true, verifiedStatus: 'verified',
   },
   {
     id: '54', title: 'Villa Marina — 2BD Ocean View Condo',
@@ -642,7 +697,8 @@ export const properties: Property[] = [
     lat: 7.4261, lng: -80.1854, address: 'Villa Marina, Playa Venao',
     images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'],
     agent_name: 'Open Doors Panama', agent_phone: '', agent_email: 'info@opendoorspanama.com',
-    source: 'villamarina.com.pa', created_at: '2024-06-01'
+    source: 'villamarina.com.pa', created_at: '2024-06-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '55', title: 'Villa Marina — 3BD Beachfront Condo ($630K)',
@@ -652,7 +708,8 @@ export const properties: Property[] = [
     lat: 7.4259, lng: -80.18565, address: 'Villa Marina, Playa Venao',
     images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'],
     agent_name: 'Open Doors Panama', agent_phone: '', agent_email: 'info@opendoorspanama.com',
-    source: 'Open Doors Panama', created_at: '2024-05-01'
+    source: 'Open Doors Panama', created_at: '2024-05-01',
+    verified: true, verifiedStatus: 'high',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -666,7 +723,8 @@ export const properties: Property[] = [
     owner: 'Moledet', notes: 'moledet.com.pa — Israeli founders living in Venao. Targeting premium investors. Hilltop development crowning the beach area.',
     images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
     agent_name: 'Moledet', agent_phone: '', agent_email: '',
-    source: 'moledet.com.pa', created_at: '2025-01-01'
+    source: 'moledet.com.pa', created_at: '2025-01-01',
+    verified: true, verifiedStatus: 'high',
   },
   {
     id: '57', title: 'Terra Nova by Moledet — Community Center',
@@ -676,7 +734,8 @@ export const properties: Property[] = [
     owner: 'Moledet', notes: 'moledet.com.pa — School, sports, commercial. For the growing international community. Calm area few minutes from beach.',
     images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
     agent_name: 'Moledet', agent_phone: '', agent_email: '',
-    source: 'moledet.com.pa', created_at: '2025-01-01'
+    source: 'moledet.com.pa', created_at: '2025-01-01',
+    verified: true, verifiedStatus: 'high',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -692,7 +751,8 @@ export const properties: Property[] = [
     notes: 'Finca #21469. Land cost $10.16M (49% below $20M appraisal). $67/m² beachfront vs $500-1500 in Costa Rica. 30 beachfront villas @$5,000/m² + 50 second-line @$4,200/m². Hotel: 50 rooms, $400 ADR, $17M exit. Equity raise $12.4M, 8% per $1M. IRR 20-41%. Construction starts after 50% pre-sales. Blue Venao validated: $100M cumulative sales, $1.5M/month.',
     images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
     agent_name: 'Dekel Group (Rafi & Daniel)', agent_phone: '', agent_email: '',
-    source: 'THE-POINT OPPORTUNITY 09.02.pdf', created_at: '2026-02-09'
+    source: 'THE-POINT OPPORTUNITY 09.02.pdf', created_at: '2026-02-09',
+    verified: true, verifiedStatus: 'high',
   },
 
   // ══════════════════════════════════════════════════════════
@@ -708,7 +768,8 @@ export const properties: Property[] = [
     notes: 'Phase 0: 30 apts + commercial. Phase 1: 5 villas + 25 apts. Phase 2: 20 villas + 2,000m² commercial. Future: +26 Ha. All lots min 2,000m². Hilltop with 360° views. Design: Gensler. Projected: $100-400/m² now → $600-1200/m² by 2040.',
     images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
     agent_name: 'Green Ace (Aviad & Omri)', agent_phone: '', agent_email: '',
-    source: 'Green Ace / Cósmica', created_at: '2026-02-15'
+    source: 'Green Ace / Cósmica', created_at: '2026-02-15',
+    verified: true, verifiedStatus: 'high',
   },
 ];
 
