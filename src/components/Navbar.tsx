@@ -40,8 +40,8 @@ export default function Navbar() {
             );
           })}
         </div>
-        <button className="md:hidden text-white" onClick={() => setOpen(!open)}>
-          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2"><path d={open ? "M6 6l12 12M6 18L18 6" : "M4 6h16M4 12h16M4 18h16"}/></svg>
+        <button className="md:hidden text-white" onClick={() => setOpen(!open)} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open}>
+          <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true"><path d={open ? "M6 6l12 12M6 18L18 6" : "M4 6h16M4 12h16M4 18h16"}/></svg>
         </button>
       </div>
       {open && (

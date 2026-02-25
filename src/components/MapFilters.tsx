@@ -15,6 +15,8 @@ interface Props {
   onToggle?: () => void;
   showParcels?: boolean;
   onToggleParcels?: (v: boolean) => void;
+  showBuildings?: boolean;
+  onToggleBuildings?: (v: boolean) => void;
 }
 
 const MAX_PRICE = 6000000;
@@ -26,7 +28,7 @@ export const defaultFilters: FilterState = {
   search: '',
 };
 
-export default function MapFilters({ filters, onChange, collapsed, onToggle, showParcels, onToggleParcels }: Props) {
+export default function MapFilters({ filters, onChange, collapsed, onToggle, showParcels, onToggleParcels, showBuildings, onToggleBuildings }: Props) {
   const [, setLocalMax] = useState(String(filters.priceRange[1] >= MAX_PRICE ? '' : filters.priceRange[1]));
 
   const toggleStatus = (s: string) => {
@@ -40,7 +42,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
     <div className="flex flex-col gap-3 text-sm">
       {/* Mobile toggle handle */}
       {onToggle && (
-        <button onClick={onToggle} className="md:hidden flex items-center justify-center py-1">
+        <button onClick={onToggle} className="md:hidden flex items-center justify-center py-1" aria-label="Toggle filters">
           <div className="w-10 h-1 bg-white/40 rounded-full" />
         </button>
       )}
@@ -115,18 +117,34 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
           </div>
         </div>
 
-        {/* Parcel overlay toggle */}
-        {onToggleParcels !== undefined && (
+        {/* Overlay toggles */}
+        {(onToggleParcels !== undefined || onToggleBuildings !== undefined) && (
           <div>
-            <label className="flex items-center gap-2 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={showParcels ?? false}
-                onChange={e => onToggleParcels!(e.target.checked)}
-                className="accent-[#D97706] w-3.5 h-3.5"
-              />
-              <span className="text-white/80 text-xs">Show Parcels</span>
-            </label>
+            <p className="text-white/60 text-xs font-semibold mb-1.5 uppercase tracking-wide">Overlays</p>
+            <div className="flex flex-col gap-1.5">
+              {onToggleParcels !== undefined && (
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={showParcels ?? false}
+                    onChange={e => onToggleParcels!(e.target.checked)}
+                    className="accent-[#D97706] w-3.5 h-3.5"
+                  />
+                  <span className="text-white/80 text-xs">Show Parcels</span>
+                </label>
+              )}
+              {onToggleBuildings !== undefined && (
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={showBuildings ?? false}
+                    onChange={e => onToggleBuildings!(e.target.checked)}
+                    className="accent-[#D97706] w-3.5 h-3.5"
+                  />
+                  <span className="text-white/80 text-xs">Show Buildings</span>
+                </label>
+              )}
+            </div>
           </div>
         )}
       </div>

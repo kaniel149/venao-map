@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import type { Property } from '../data/properties';
 import { statusColors, statusLabels, formatPrice, typeLabels } from '../data/properties';
 import ParcelLayer from './ParcelLayer';
+import BuildingLayer from './BuildingLayer';
 
 function createIcon(color: string) {
   return L.divIcon({
@@ -40,9 +41,10 @@ interface Props {
   center?: [number, number];
   zoom?: number;
   showParcels?: boolean;
+  showBuildings?: boolean;
 }
 
-export default function PropertyMap({ properties, height = '100%', center = [7.4350, -80.1920], zoom = 14, showParcels = false }: Props) {
+export default function PropertyMap({ properties, height = '100%', center = [7.4350, -80.1920], zoom = 14, showParcels = false, showBuildings = false }: Props) {
   const [showUnverified, setShowUnverified] = useState(false);
 
   const verifiedProperties = properties.filter(p => p.verified !== false);
@@ -96,6 +98,7 @@ export default function PropertyMap({ properties, height = '100%', center = [7.4
           </LayersControl.BaseLayer>
         </LayersControl>
         <ParcelLayer visible={showParcels} />
+        <BuildingLayer visible={showBuildings} />
         {displayProperties.map(p => {
           const isUncertain = p.verified === false;
           const icon = isUncertain ? uncertainIcon : createIcon(statusColors[p.status]);
