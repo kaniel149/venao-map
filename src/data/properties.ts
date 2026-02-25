@@ -63,8 +63,9 @@ export const agents: Agent[] = [
   { id: '11', name: 'Panama Properties', company: 'Panama Properties', phone: '+507 6169-2453', email: 'info@panama-properties.com', website: 'https://panama-properties.com', properties_count: 4 },
   { id: '12', name: 'Love Your Land Panama', company: 'Love Your Land Panama', phone: '', email: 'info@loveyourlandpanama.com', website: 'https://loveyourlandpanama.com', properties_count: 6 },
   { id: '13', name: 'Open Doors Panama', company: 'Open Doors Panama', phone: '', email: 'info@opendoorspanama.com', website: 'https://opendoorspanama.com', properties_count: 1 },
-  { id: '14', name: 'Dekel Group (Rafi & Daniel)', company: 'Dekel Group', phone: '', email: '', properties_count: 1 },
+  { id: '14', name: 'Dekel Group (Rafi & Daniel)', company: 'Dekel Development Group', phone: '', email: '', properties_count: 2 },
   { id: '15', name: 'Moledet', company: 'Moledet', phone: '', email: '', website: 'https://moledet.com.pa', properties_count: 2 },
+  { id: '16', name: 'Green Ace (Aviad & Omri)', company: 'Green Ace Development & Construction', phone: '', email: '', properties_count: 1 },
 ];
 
 // ============================================================
@@ -676,6 +677,38 @@ export const properties: Property[] = [
     images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
     agent_name: 'Moledet', agent_phone: '', agent_email: '',
     source: 'moledet.com.pa', created_at: '2025-01-01'
+  },
+
+  // ══════════════════════════════════════════════════════════
+  // THE POINT — Dekel Development Group ($120M project)
+  // ══════════════════════════════════════════════════════════
+  {
+    id: '58', title: 'The Point — Beachfront Luxury Development ($120M)',
+    description: 'FLAGSHIP PROJECT: 160,500 m² (39.7 acres) beachfront. 80 villas + 50-key boutique hotel. By Dekel Group (creators of Selina). Architect: George Moreno. Builder: Grupo Céspedes. Investment lead: Ohad Landau (ex-Harel, $4B track record).',
+    type: 'commercial', status: 'under_construction', price: 68600000, currency: 'USD',
+    size_sqm: 160500, land_size_sqm: 160500,
+    lat: 7.4310, lng: -80.1875, address: 'East Side, Playa Venao Beach',
+    owner: 'Dekel Development Group (Rafi & Daniel)',
+    notes: 'Finca #21469. Land cost $10.16M (49% below $20M appraisal). $67/m² beachfront vs $500-1500 in Costa Rica. 30 beachfront villas @$5,000/m² + 50 second-line @$4,200/m². Hotel: 50 rooms, $400 ADR, $17M exit. Equity raise $12.4M, 8% per $1M. IRR 20-41%. Construction starts after 50% pre-sales. Blue Venao validated: $100M cumulative sales, $1.5M/month.',
+    images: ['https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800'],
+    agent_name: 'Dekel Group (Rafi & Daniel)', agent_phone: '', agent_email: '',
+    source: 'THE-POINT OPPORTUNITY 09.02.pdf', created_at: '2026-02-09'
+  },
+
+  // ══════════════════════════════════════════════════════════
+  // CÓSMICA (Venao Gardens) — Green Ace Development
+  // ══════════════════════════════════════════════════════════
+  {
+    id: '59', title: 'Cósmica (Venao Gardens) — Hilltop Luxury Community',
+    description: 'MAJOR PROJECT: 7 Ha Phase 1-2 (expandable to 40 Ha). 25 villas + 55 apartments + boutique hotel + commercial. By Green Ace (Aviad Ben Meir CEO, Omri Perez COO, Gaston Arizaga VP). Planning by Gensler. Ridgeline location with 360° Pacific + jungle views.',
+    type: 'commercial', status: 'under_construction', price: 0, currency: 'USD',
+    size_sqm: 70000, land_size_sqm: 400000,
+    lat: 7.4365, lng: -80.1960, address: 'Hilltops above Playa Venao Bay',
+    owner: 'Green Ace Development & Construction (Aviad Ben Meir, Omri Perez, Gaston Arizaga)',
+    notes: 'Phase 0: 30 apts + commercial. Phase 1: 5 villas + 25 apts. Phase 2: 20 villas + 2,000m² commercial. Future: +26 Ha. All lots min 2,000m². NOT beachfront — hilltop "environmental intelligence". View hierarchy: 360° ridgeline > ocean-oriented > mountain > forest. Design: Gensler. Projected: $100-400/m² now → $600-1200/m² by 2040.',
+    images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
+    agent_name: 'Green Ace (Aviad & Omri)', agent_phone: '', agent_email: '',
+    source: 'Cosmica Green Ace Short version 15.2.pdf', created_at: '2026-02-15'
   },
 ];
 
