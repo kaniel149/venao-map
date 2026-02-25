@@ -2,8 +2,8 @@ export interface Property {
   id: string;
   title: string;
   description: string;
-  type: 'land' | 'house' | 'condo' | 'commercial';
-  status: 'for_sale' | 'for_rent' | 'under_construction' | 'sold' | 'rented';
+  type: 'land' | 'house' | 'condo' | 'commercial' | 'development';
+  status: 'for_sale' | 'for_rent' | 'under_construction' | 'sold' | 'rented' | 'pre_sale';
   price: number;
   currency: string;
   size_sqm: number;
@@ -699,16 +699,16 @@ export const properties: Property[] = [
   // CÓSMICA (Venao Gardens) — Green Ace Development
   // ══════════════════════════════════════════════════════════
   {
-    id: '59', title: 'Cósmica (Venao Gardens) — Hilltop Luxury Community',
-    description: 'MAJOR PROJECT: 7 Ha Phase 1-2 (expandable to 40 Ha). 25 villas + 55 apartments + boutique hotel + commercial. By Green Ace (Aviad Ben Meir CEO, Omri Perez COO, Gaston Arizaga VP). Planning by Gensler. Ridgeline location with 360° Pacific + jungle views.',
-    type: 'commercial', status: 'under_construction', price: 0, currency: 'USD',
+    id: '59', title: 'Cósmica - Venao Gardens',
+    description: 'Phase 1: 7ha, 5 villas + 25 apartments + boutique hotel. Architect: Gensler. Total buildout: 40ha. Ridgeline above Venao Bay with 360° Pacific + jungle views.',
+    type: 'development', status: 'pre_sale', price: 0, currency: 'USD',
     size_sqm: 70000, land_size_sqm: 400000,
-    lat: 7.4365, lng: -80.1960, address: 'Hilltops above Playa Venao Bay',
-    owner: 'Green Ace Development & Construction (Aviad Ben Meir, Omri Perez, Gaston Arizaga)',
-    notes: 'Phase 0: 30 apts + commercial. Phase 1: 5 villas + 25 apts. Phase 2: 20 villas + 2,000m² commercial. Future: +26 Ha. All lots min 2,000m². NOT beachfront — hilltop "environmental intelligence". View hierarchy: 360° ridgeline > ocean-oriented > mountain > forest. Design: Gensler. Projected: $100-400/m² now → $600-1200/m² by 2040.',
+    lat: 7.438, lng: -80.195, address: 'Ridgeline above Venao Bay',
+    owner: 'Green Ace Development',
+    notes: 'Phase 0: 30 apts + commercial. Phase 1: 5 villas + 25 apts. Phase 2: 20 villas + 2,000m² commercial. Future: +26 Ha. All lots min 2,000m². Hilltop with 360° views. Design: Gensler. Projected: $100-400/m² now → $600-1200/m² by 2040.',
     images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
     agent_name: 'Green Ace (Aviad & Omri)', agent_phone: '', agent_email: '',
-    source: 'Cosmica Green Ace Short version 15.2.pdf', created_at: '2026-02-15'
+    source: 'Green Ace / Cósmica', created_at: '2026-02-15'
   },
 ];
 
@@ -718,6 +718,7 @@ export const statusColors: Record<string, string> = {
   under_construction: '#E65100',
   sold: '#C62828',
   rented: '#757575',
+  pre_sale: '#7B1FA2',
 };
 
 export const statusLabels: Record<string, string> = {
@@ -726,6 +727,7 @@ export const statusLabels: Record<string, string> = {
   under_construction: 'Under Construction',
   sold: 'Sold',
   rented: 'Operating / Not for Sale',
+  pre_sale: 'Pre-Sale',
 };
 
 export const typeLabels: Record<string, string> = {
@@ -733,6 +735,7 @@ export const typeLabels: Record<string, string> = {
   house: 'House',
   condo: 'Condo',
   commercial: 'Commercial',
+  development: 'Development',
 };
 
 export function formatPrice(price: number): string {
