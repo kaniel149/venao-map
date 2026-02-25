@@ -11,8 +11,8 @@ export default function Insights() {
 
   return (
     <div className="pt-20 pb-10 px-4 max-w-6xl mx-auto">
-      <h1 className="text-3xl font-bold text-[#0C2340] mb-2">Venao in Numbers</h1>
-      <p className="text-gray-600 mb-8">Real estate intelligence for Playa Venao, Panama</p>
+      <h1 className="text-3xl font-bold text-[#0F172A] mb-2">Venao in Numbers</h1>
+      <p className="text-slate-600 mb-8">Real estate intelligence for Playa Venao, Panama</p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         <StatCard value="~800" label="Permanent Residents" sub="90% expats" />
@@ -21,7 +21,7 @@ export default function Insights() {
         <StatCard value={String(underConstruction.length)} label="Active Construction" sub="Projects underway" />
       </div>
 
-      <h2 className="text-2xl font-bold text-[#0C2340] mb-4">Property Prices by Type</h2>
+      <h2 className="text-2xl font-bold text-[#0F172A] mb-4">Property Prices by Type</h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
         {[
           { type: 'land', icon: '🌿', label: 'Land' },
@@ -33,20 +33,20 @@ export default function Insights() {
           return (
             <div key={type} className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
               <p className="text-2xl mb-2">{icon}</p>
-              <p className="font-bold text-[#0C2340]">{label}</p>
-              <p className="text-sm text-gray-600">{list.length} available</p>
-              <p className="text-sm font-semibold text-[#D4A843] mt-1">{priceRange(list)}</p>
+              <p className="font-bold text-[#0F172A]">{label}</p>
+              <p className="text-sm text-slate-600">{list.length} available</p>
+              <p className="text-sm font-semibold text-[#D97706] mt-1">{priceRange(list)}</p>
             </div>
           );
         })}
       </div>
 
-      <h2 className="text-2xl font-bold text-[#0C2340] mb-4">Property Density Map</h2>
+      <h2 className="text-2xl font-bold text-[#0F172A] mb-4">Property Density Map</h2>
       <div className="h-96 rounded-xl overflow-hidden mb-10">
         <PropertyMap properties={properties} />
       </div>
 
-      <div className="bg-[#0C2340] rounded-xl p-8 text-white">
+      <div className="bg-[#0F172A] rounded-xl p-8 text-white">
         <h2 className="text-2xl font-bold mb-4">About Playa Venao</h2>
         <div className="grid md:grid-cols-2 gap-6 text-white/80 text-sm leading-relaxed">
           <div>
@@ -63,7 +63,7 @@ export default function Insights() {
               <li>• 4.5 hours from Panama City</li>
               <li>• Year-round warm weather (28-32°C)</li>
             </ul>
-            <a href="https://yallavenao.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[#D4A843] hover:underline font-medium">
+            <a href="https://yallavenao.com" target="_blank" rel="noopener noreferrer" className="inline-block mt-4 text-[#D97706] hover:underline font-medium">
               Explore Yalla Venao for lifestyle data →
             </a>
           </div>
@@ -75,8 +75,8 @@ export default function Insights() {
 
 function StatCard({ value, label, sub }: { value: string; label: string; sub: string }) {
   return (
-    <div className="bg-[#0C2340] rounded-xl p-5 text-white">
-      <p className="text-3xl font-bold text-[#D4A843]">{value}</p>
+    <div className="bg-[#0F172A] rounded-xl p-5 text-white">
+      <p className="text-3xl font-bold text-[#D97706]">{value}</p>
       <p className="font-semibold mt-1">{label}</p>
       <p className="text-white/60 text-sm">{sub}</p>
     </div>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { getProperties, getLeads, deleteProperty, saveProperty } from '../data/store';
-import { statusLabels, typeLabels, formatPrice } from '../data/properties';
+import { statusLabels, statusColors, typeLabels, formatPrice } from '../data/properties';
 import type { Property } from '../data/properties';
 
 const ADMIN_PASSWORD = 'venao2024';
@@ -14,9 +14,9 @@ export default function Admin() {
   if (!authed) return (
     <div className="pt-24 flex items-center justify-center min-h-screen bg-gray-50">
       <form onSubmit={e => { e.preventDefault(); if (password === ADMIN_PASSWORD) setAuthed(true); }} className="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full mx-4">
-        <h1 className="text-2xl font-bold text-[#0C2340] mb-6 text-center">Admin Login</h1>
-        <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#D4A843] focus:ring-1 focus:ring-[#D4A843] outline-none mb-4" />
-        <button type="submit" className="w-full bg-[#0C2340] text-white font-semibold py-2.5 rounded-lg hover:bg-[#0a1c33]">Login</button>
+        <h1 className="text-2xl font-bold text-[#0F172A] mb-6 text-center">Admin Login</h1>
+        <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#D97706] focus:ring-1 focus:ring-[#D97706] outline-none mb-4" />
+        <button type="submit" className="w-full bg-[#0F172A] text-white font-semibold py-2.5 rounded-lg hover:bg-[#020617]">Login</button>
       </form>
     </div>
   );
@@ -28,13 +28,13 @@ export default function Admin() {
   return (
     <div className="pt-20 pb-10 px-4 max-w-7xl mx-auto" key={refresh}>
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-bold text-[#0C2340]">Admin Panel</h1>
-        <button onClick={() => setAuthed(false)} className="text-sm text-gray-500 hover:text-gray-700">Logout</button>
+        <h1 className="text-3xl font-bold text-[#0F172A]">Admin Panel</h1>
+        <button onClick={() => setAuthed(false)} className="text-sm text-slate-500 hover:text-slate-700">Logout</button>
       </div>
 
       <div className="flex gap-2 mb-6 flex-wrap">
         {(['dashboard', 'properties', 'leads', 'add'] as const).map(t => (
-          <button key={t} onClick={() => setTab(t)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${tab === t ? 'bg-[#0C2340] text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
+          <button key={t} onClick={() => setTab(t)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${tab === t ? 'bg-[#0F172A] text-white' : 'bg-gray-100 text-slate-700 hover:bg-gray-200'}`}>
             {t === 'add' ? '+ Add Property' : t.charAt(0).toUpperCase() + t.slice(1)}
           </button>
         ))}
@@ -50,20 +50,20 @@ export default function Admin() {
       )}
 
       {tab === 'properties' && (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto bg-white rounded-xl border border-gray-100 shadow-sm">
           <table className="w-full text-sm">
-            <thead><tr className="border-b text-left text-gray-500">
-              <th className="pb-2">Title</th><th className="pb-2">Type</th><th className="pb-2">Status</th><th className="pb-2">Price</th><th className="pb-2">Actions</th>
+            <thead><tr className="bg-gray-50 border-b border-gray-200 text-left text-slate-500 text-xs uppercase tracking-wider">
+              <th className="px-5 py-3 font-semibold">Title</th><th className="px-5 py-3 font-semibold">Type</th><th className="px-5 py-3 font-semibold">Status</th><th className="px-5 py-3 font-semibold">Price</th><th className="px-5 py-3 font-semibold">Actions</th>
             </tr></thead>
-            <tbody>
+            <tbody className="divide-y divide-gray-100">
               {properties.map(p => (
-                <tr key={p.id} className="border-b">
-                  <td className="py-3 font-medium">{p.title}</td>
-                  <td>{typeLabels[p.type]}</td>
-                  <td>{statusLabels[p.status]}</td>
-                  <td>{formatPrice(p.price)}</td>
-                  <td>
-                    <button onClick={() => { deleteProperty(p.id); setRefresh(r => r + 1); }} className="text-red-500 hover:text-red-700 text-xs">Delete</button>
+                <tr key={p.id} className="hover:bg-amber-50/30 transition-colors">
+                  <td className="px-5 py-3.5 font-medium text-[#0F172A]">{p.title}</td>
+                  <td className="px-5 py-3.5 text-slate-600">{typeLabels[p.type]}</td>
+                  <td className="px-5 py-3.5"><span className="text-xs px-2.5 py-1 rounded-full text-white font-medium" style={{ backgroundColor: statusColors[p.status] }}>{statusLabels[p.status]}</span></td>
+                  <td className="px-5 py-3.5 font-semibold text-[#0F172A]">{formatPrice(p.price)}</td>
+                  <td className="px-5 py-3.5">
+                    <button onClick={() => { deleteProperty(p.id); setRefresh(r => r + 1); }} className="text-red-500 hover:text-red-700 text-xs font-medium">Delete</button>
                   </td>
                 </tr>
               ))}
@@ -74,23 +74,25 @@ export default function Admin() {
 
       {tab === 'leads' && (
         <div className="overflow-x-auto">
-          {leads.length === 0 ? <p className="text-gray-500 py-8 text-center">No leads yet.</p> : (
+          {leads.length === 0 ? <p className="text-slate-400 py-12 text-center">No leads yet.</p> : (
+            <div className="bg-white rounded-xl border border-gray-100 shadow-sm">
             <table className="w-full text-sm">
-              <thead><tr className="border-b text-left text-gray-500">
-                <th className="pb-2">Name</th><th className="pb-2">Email</th><th className="pb-2">Phone</th><th className="pb-2">Message</th><th className="pb-2">Date</th>
+              <thead><tr className="bg-gray-50 border-b border-gray-200 text-left text-slate-500 text-xs uppercase tracking-wider">
+                <th className="px-5 py-3 font-semibold">Name</th><th className="px-5 py-3 font-semibold">Email</th><th className="px-5 py-3 font-semibold">Phone</th><th className="px-5 py-3 font-semibold">Message</th><th className="px-5 py-3 font-semibold">Date</th>
               </tr></thead>
-              <tbody>
+              <tbody className="divide-y divide-gray-100">
                 {leads.map(l => (
-                  <tr key={l.id} className="border-b">
-                    <td className="py-3 font-medium">{l.name}</td>
-                    <td>{l.email}</td>
-                    <td>{l.phone}</td>
-                    <td className="max-w-xs truncate">{l.message}</td>
-                    <td className="text-gray-500">{new Date(l.created_at).toLocaleDateString()}</td>
+                  <tr key={l.id} className="hover:bg-amber-50/30 transition-colors">
+                    <td className="px-5 py-3.5 font-medium text-[#0F172A]">{l.name}</td>
+                    <td className="px-5 py-3.5 text-slate-600">{l.email}</td>
+                    <td className="px-5 py-3.5 text-slate-600">{l.phone}</td>
+                    <td className="px-5 py-3.5 max-w-xs truncate text-slate-500">{l.message}</td>
+                    <td className="px-5 py-3.5 text-slate-400">{new Date(l.created_at).toLocaleDateString()}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
+            </div>
           )}
         </div>
       )}
@@ -102,9 +104,9 @@ export default function Admin() {
 
 function DashCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
-      <p className="text-4xl font-bold text-[#0C2340] mb-1">{value}</p>
-      <p className="text-gray-500 text-sm">{label}</p>
+    <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow hover:border-amber-200">
+      <p className="text-4xl font-extrabold text-[#0F172A] mb-1">{value}</p>
+      <p className="text-slate-500 text-sm font-medium">{label}</p>
     </div>
   );
 }
@@ -143,7 +145,7 @@ function AddPropertyForm({ onSave }: { onSave: () => void }) {
     onSave();
   };
 
-  const inputClass = "w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-[#D4A843] focus:ring-1 focus:ring-[#D4A843] outline-none text-sm";
+  const inputClass = "w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-[#D97706] focus:ring-1 focus:ring-[#D97706] outline-none text-sm";
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl space-y-4">
@@ -177,7 +179,7 @@ function AddPropertyForm({ onSave }: { onSave: () => void }) {
         <input placeholder="Agent Phone" onChange={e => set('agent_phone', e.target.value)} className={inputClass} />
         <input placeholder="Agent Email" onChange={e => set('agent_email', e.target.value)} className={inputClass} />
       </div>
-      <button type="submit" className="bg-[#0C2340] text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-[#0a1c33]">Save Property</button>
+      <button type="submit" className="bg-[#0F172A] text-white font-semibold px-6 py-2.5 rounded-lg hover:bg-[#020617]">Save Property</button>
     </form>
   );
 }

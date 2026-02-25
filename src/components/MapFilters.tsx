@@ -53,7 +53,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
             placeholder="Search name, owner, address..."
             value={filters.search}
             onChange={e => onChange({ ...filters, search: e.target.value })}
-            className="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#D4A843] focus:bg-white/15 transition-all"
+            className="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#D97706] focus:bg-white/15 transition-all"
           />
         </div>
 
@@ -67,7 +67,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
                   type="checkbox"
                   checked={filters.statuses.includes(key)}
                   onChange={() => toggleStatus(key)}
-                  className="accent-[#D4A843] w-3.5 h-3.5"
+                  className="accent-[#D97706] w-3.5 h-3.5"
                 />
                 <span className="w-2.5 h-2.5 rounded-full inline-block" style={{ backgroundColor: statusColors[key] }} />
                 <span className="text-white/80 text-xs">{label}</span>
@@ -82,7 +82,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
           <select
             value={filters.type}
             onChange={e => onChange({ ...filters, type: e.target.value })}
-            className="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-[#D4A843] focus:bg-white/15 transition-all [&>option]:text-black"
+            className="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-[#D97706] focus:bg-white/15 transition-all [&>option]:text-black"
           >
             <option value="all">All Types</option>
             {Object.entries(typeLabels).map(([key, label]) => (
@@ -107,7 +107,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
               setLocalMax(v >= MAX_PRICE ? '' : String(v));
               onChange({ ...filters, priceRange: [0, v] });
             }}
-            className="w-full accent-[#D4A843]"
+            className="w-full accent-[#D97706]"
           />
           <div className="flex justify-between text-white/40 text-xs">
             <span>$0</span>
@@ -123,7 +123,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
                 type="checkbox"
                 checked={showParcels ?? false}
                 onChange={e => onToggleParcels!(e.target.checked)}
-                className="accent-[#D4A843] w-3.5 h-3.5"
+                className="accent-[#D97706] w-3.5 h-3.5"
               />
               <span className="text-white/80 text-xs">Show Parcels</span>
             </label>

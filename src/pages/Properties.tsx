@@ -25,12 +25,12 @@ export default function Properties() {
     return list;
   }, [allProperties, type, status, sort, priceRange]);
 
-  const selectClass = "px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:border-[#D4A843] focus:ring-1 focus:ring-[#D4A843] outline-none bg-white transition-colors hover:border-gray-300 cursor-pointer";
+  const selectClass = "px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:border-[#D97706] focus:ring-1 focus:ring-[#D97706] outline-none bg-white transition-colors hover:border-gray-300 cursor-pointer";
 
   return (
     <div className="pt-20 pb-10 px-4 max-w-7xl mx-auto">
-      <h1 className="text-3xl font-bold text-[#0C2340] mb-2">Properties in Playa Venao</h1>
-      <p className="text-gray-500 mb-8">{filtered.length} properties available</p>
+      <h1 className="text-3xl font-bold text-[#0F172A] mb-2">Properties in Playa Venao</h1>
+      <p className="text-slate-500 mb-8">{filtered.length} properties available</p>
 
       <div className="flex flex-wrap gap-3 mb-8 p-4 bg-gray-50 rounded-xl border border-gray-100">
         <select value={type} onChange={e => setType(e.target.value)} className={selectClass}>
@@ -59,7 +59,7 @@ export default function Properties() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map(p => <PropertyCard key={p.id} property={p} />)}
       </div>
-      {filtered.length === 0 && <p className="text-center text-gray-500 py-12">No properties match your filters.</p>}
+      {filtered.length === 0 && <p className="text-center text-slate-500 py-12">No properties match your filters.</p>}
     </div>
   );
 }

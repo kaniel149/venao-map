@@ -22,9 +22,9 @@ export default function Home() {
 
         {/* Desktop sidebar */}
         <div className="hidden md:block absolute top-4 left-4 z-10 w-80">
-          <div className="bg-[#0C2340]/90 backdrop-blur-sm rounded-xl p-5">
-            <h1 className="text-xl font-bold text-white mb-1" style={{ fontFamily: 'Playfair Display' }}>
-              Every property in <span className="text-[#D4A843]">Playa Venao</span>
+          <div className="bg-[#0F172A]/90 backdrop-blur-sm rounded-xl p-5">
+            <h1 className="text-xl font-bold text-white mb-1" style={{ fontFamily: 'Inter' }}>
+              Every property in <span className="text-[#D97706]">Playa Venao</span>
             </h1>
             <p className="text-white/60 text-xs mb-4">Panama's fastest-growing beach town</p>
 
@@ -34,7 +34,7 @@ export default function Home() {
 
             <button
               onClick={() => setShowForm(!showForm)}
-              className="mt-3 w-full bg-[#D4A843] text-[#0C2340] font-semibold px-4 py-2 rounded-lg text-sm hover:bg-[#c49a3a] transition-colors"
+              className="mt-3 w-full bg-[#D97706] text-[#0F172A] font-semibold px-4 py-2 rounded-lg text-sm hover:bg-[#B45309] transition-colors"
             >
               Looking for property?
             </button>
@@ -48,7 +48,7 @@ export default function Home() {
 
         {/* Mobile slide-up panel */}
         <div
-          className={`md:hidden absolute left-0 right-0 bottom-0 z-10 bg-[#0C2340]/95 backdrop-blur-sm rounded-t-2xl transition-transform duration-300 ${
+          className={`md:hidden absolute left-0 right-0 bottom-0 z-10 bg-[#0F172A]/95 backdrop-blur-sm rounded-t-2xl transition-transform duration-300 ${
             panelOpen ? 'translate-y-0' : 'translate-y-[calc(100%-3.5rem)]'
           }`}
           style={{ maxHeight: '70vh' }}
@@ -63,7 +63,7 @@ export default function Home() {
               <span className="text-white text-sm font-semibold">
                 {filtered.length} properties
               </span>
-              <span className="text-[#D4A843] text-xs font-medium">
+              <span className="text-[#D97706] text-xs font-medium">
                 {panelOpen ? 'Close' : 'Filter & Search ▲'}
               </span>
             </div>
@@ -74,7 +74,7 @@ export default function Home() {
             <MapFilters filters={filters} onChange={setFilters} showParcels={showParcels} onToggleParcels={setShowParcels} />
             <button
               onClick={() => setShowForm(!showForm)}
-              className="mt-4 w-full bg-[#D4A843] text-[#0C2340] font-semibold px-4 py-2.5 rounded-lg text-sm"
+              className="mt-4 w-full bg-[#D97706] text-[#0F172A] font-semibold px-4 py-2.5 rounded-lg text-sm"
             >
               Looking for property?
             </button>
@@ -87,12 +87,12 @@ export default function Home() {
         </div>
 
         {/* Desktop stats bar */}
-        <div className="hidden md:block absolute bottom-0 left-0 right-0 z-10 bg-[#0C2340]/90 backdrop-blur-sm">
+        <div className="hidden md:block absolute bottom-0 left-0 right-0 z-10 bg-[#0F172A]/90 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
             <div className="flex flex-wrap gap-6 text-white/90 text-sm">
-              <span><strong className="text-[#D4A843]">42</strong> businesses</span>
-              <span><strong className="text-[#D4A843]">1,500-3,000</strong> visitors/season</span>
-              <span><strong className="text-[#D4A843]">{filtered.length}</strong> listings shown</span>
+              <span><strong className="text-[#D97706]">42</strong> businesses</span>
+              <span><strong className="text-[#D97706]">1,500-3,000</strong> visitors/season</span>
+              <span><strong className="text-[#D97706]">{filtered.length}</strong> listings shown</span>
             </div>
             <a href="https://wa.me/50766196669" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#20bd5a] transition-colors flex items-center gap-2">
               💬 WhatsApp

@@ -774,12 +774,12 @@ export const properties: Property[] = [
 ];
 
 export const statusColors: Record<string, string> = {
-  for_sale: '#2E7D32',
-  for_rent: '#1565C0',
-  under_construction: '#E65100',
-  sold: '#C62828',
-  rented: '#757575',
-  pre_sale: '#7B1FA2',
+  for_sale: '#059669',
+  for_rent: '#2563EB',
+  under_construction: '#D97706',
+  sold: '#DC2626',
+  rented: '#64748B',
+  pre_sale: '#7C3AED',
 };
 
 export const statusLabels: Record<string, string> = {

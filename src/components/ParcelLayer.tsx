@@ -32,9 +32,9 @@ export default function ParcelLayer({ visible }: Props) {
             <Popup>
               <div className="font-sans" style={{ minWidth: 200 }}>
                 <h3 className="font-bold text-sm mb-1">{name}</h3>
-                <p className="text-xs text-gray-600 mb-0.5"><strong>Owner:</strong> {owner}</p>
-                <p className="text-xs text-gray-600 mb-0.5"><strong>Status:</strong> {status}</p>
-                <p className="text-xs text-gray-600"><strong>Area:</strong> {area_m2.toLocaleString()} m²</p>
+                <p className="text-xs text-slate-600 mb-0.5"><strong>Owner:</strong> {owner}</p>
+                <p className="text-xs text-slate-600 mb-0.5"><strong>Status:</strong> {status}</p>
+                <p className="text-xs text-slate-600"><strong>Area:</strong> {area_m2.toLocaleString()} m²</p>
               </div>
             </Popup>
           </Polygon>

@@ -53,15 +53,29 @@ export default function PropertyMap({ properties, height = '100%', center = [7.4
     <div style={{ height, width: '100%', position: 'relative' }}>
       <div style={{
         position: 'absolute', top: 10, left: 50, zIndex: 1000,
-        background: 'white', borderRadius: 8, padding: '6px 12px',
-        boxShadow: '0 2px 6px rgba(0,0,0,0.3)', fontSize: 13,
+        background: showUnverified ? '#0F172A' : 'white',
+        borderRadius: 8, padding: '8px 14px',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+        fontSize: 13,
         display: 'flex', alignItems: 'center', gap: 8,
+        border: showUnverified ? '1px solid #D97706' : '1px dashed #94A3B8',
+        transition: 'all 0.2s ease',
       }}>
-        <label style={{ display: 'flex', alignItems: 'center', gap: 6, cursor: 'pointer', margin: 0 }}>
+        <label style={{ display: 'flex', alignItems: 'center', gap: 8, cursor: 'pointer', margin: 0, color: showUnverified ? '#D97706' : '#64748B', fontWeight: 500 }}>
+          <span style={{
+            width: 18, height: 18, borderRadius: 4,
+            border: showUnverified ? '2px solid #D97706' : '2px dashed #94A3B8',
+            background: showUnverified ? '#D97706' : 'transparent',
+            display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+            transition: 'all 0.2s ease',
+          }}>
+            {showUnverified && <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>}
+          </span>
           <input
             type="checkbox"
             checked={showUnverified}
             onChange={e => setShowUnverified(e.target.checked)}
+            style={{ display: 'none' }}
           />
           Show unverified ({unverifiedProperties.length})
         </label>
@@ -88,38 +102,32 @@ export default function PropertyMap({ properties, height = '100%', center = [7.4
           return (
             <Marker key={p.id} position={[p.lat, p.lng]} icon={icon}>
               <Popup maxWidth={320}>
-                <div className="font-sans" style={{ minWidth: 260 }}>
-                  <img src={p.images[0]} alt={p.title} className="w-full h-32 object-cover rounded mb-2" />
-                  <h3 className="font-bold text-sm mb-1">{p.title}</h3>
-                  {isUncertain && (
-                    <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-gray-400 text-white mb-1">
-                      ⚠ Approximate location
+                <div className="font-sans" style={{ minWidth: 280, margin: -4 }}>
+                  <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '8px 8px 0 0', marginBottom: 10 }}>
+                    <img src={p.images[0]} alt={p.title} style={{ width: '100%', height: 140, objectFit: 'cover', display: 'block' }} />
+                    <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.3), transparent)' }} />
+                    <span style={{ position: 'absolute', top: 8, left: 8, fontSize: 11, padding: '3px 10px', borderRadius: 20, color: 'white', fontWeight: 600, backgroundColor: statusColors[p.status] }}>
+                      {statusLabels[p.status]}
                     </span>
-                  )}
-                  <p className="text-lg font-bold text-[#0C2340] mb-1">{formatPrice(p.price)}</p>
-                  <div className="flex gap-2 text-xs text-gray-600 mb-1">
-                    <span>{typeLabels[p.type]}</span>
-                    <span>•</span>
-                    <span>{p.size_sqm.toLocaleString()} m²</span>
-                    {p.land_size_sqm && p.land_size_sqm !== p.size_sqm && <><span>•</span><span>Land: {p.land_size_sqm.toLocaleString()} m²</span></>}
-                    {p.bedrooms && <><span>•</span><span>{p.bedrooms} bd</span></>}
-                    {p.bathrooms && <><span>•</span><span>{p.bathrooms} ba</span></>}
+                    {isUncertain && (
+                      <span style={{ position: 'absolute', top: 8, right: 8, fontSize: 11, padding: '3px 10px', borderRadius: 20, color: 'white', fontWeight: 500, backgroundColor: '#64748B', border: '1px dashed #94A3B8' }}>
+                        ⚠ Approx.
+                      </span>
+                    )}
                   </div>
-                  <span className="inline-block text-xs px-2 py-0.5 rounded-full text-white mb-2" style={{ backgroundColor: statusColors[p.status] }}>
-                    {statusLabels[p.status]}
-                  </span>
-                  {p.owner && (
-                    <p className="text-xs text-gray-700 mb-1"><strong>Owner:</strong> {p.owner}</p>
-                  )}
-                  {p.purchase_date && (
-                    <p className="text-xs text-gray-700 mb-1"><strong>Purchased:</strong> {p.purchase_date}</p>
-                  )}
-                  {p.notes && (
-                    <p className="text-xs text-gray-500 italic mb-1">{p.notes}</p>
-                  )}
-                  <p className="text-xs text-gray-500 mb-1">{p.address}</p>
-                  {p.agent_name !== 'N/A' && <p className="text-xs text-gray-500 mb-2">Agent: {p.agent_name}</p>}
-                  <Link to={`/property/${p.id}`} className="text-xs text-[#D4A843] font-semibold hover:underline">View Details →</Link>
+                  <div style={{ padding: '0 4px 4px' }}>
+                    <h3 style={{ fontWeight: 700, fontSize: 14, color: '#0F172A', marginBottom: 2, lineHeight: 1.3 }}>{p.title}</h3>
+                    <p style={{ fontSize: 22, fontWeight: 800, color: '#0F172A', margin: '4px 0 6px' }}>{formatPrice(p.price)}</p>
+                    <div style={{ display: 'flex', gap: 6, fontSize: 11, color: '#64748B', marginBottom: 8, flexWrap: 'wrap' }}>
+                      <span style={{ background: '#F1F5F9', padding: '2px 8px', borderRadius: 4, fontWeight: 500 }}>{typeLabels[p.type]}</span>
+                      <span style={{ background: '#F1F5F9', padding: '2px 8px', borderRadius: 4 }}>{p.size_sqm.toLocaleString()} m²</span>
+                      {p.bedrooms && <span style={{ background: '#F1F5F9', padding: '2px 8px', borderRadius: 4 }}>{p.bedrooms} bd</span>}
+                      {p.bathrooms && <span style={{ background: '#F1F5F9', padding: '2px 8px', borderRadius: 4 }}>{p.bathrooms} ba</span>}
+                    </div>
+                    <p style={{ fontSize: 11, color: '#94A3B8', marginBottom: 4 }}>{p.address}</p>
+                    {p.agent_name !== 'N/A' && <p style={{ fontSize: 11, color: '#94A3B8', marginBottom: 8 }}>Agent: {p.agent_name}</p>}
+                    <Link to={`/property/${p.id}`} style={{ display: 'inline-block', fontSize: 12, fontWeight: 600, color: '#D97706', textDecoration: 'none' }}>View Details →</Link>
+                  </div>
                 </div>
               </Popup>
             </Marker>
