@@ -51,7 +51,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle }: P
             placeholder="Search name, owner, address..."
             value={filters.search}
             onChange={e => onChange({ ...filters, search: e.target.value })}
-            className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 text-sm focus:outline-none focus:border-[#D4A843]"
+            className="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/40 text-sm focus:outline-none focus:border-[#D4A843] focus:bg-white/15 transition-all"
           />
         </div>
 
@@ -60,7 +60,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle }: P
           <p className="text-white/60 text-xs font-semibold mb-1.5 uppercase tracking-wide">Status</p>
           <div className="flex flex-wrap gap-x-3 gap-y-1.5">
             {Object.entries(statusLabels).map(([key, label]) => (
-              <label key={key} className="flex items-center gap-1.5 cursor-pointer">
+              <label key={key} className="flex items-center gap-1.5 cursor-pointer hover:text-white transition-colors">
                 <input
                   type="checkbox"
                   checked={filters.statuses.includes(key)}
@@ -80,7 +80,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle }: P
           <select
             value={filters.type}
             onChange={e => onChange({ ...filters, type: e.target.value })}
-            className="w-full px-3 py-2 rounded-lg bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-[#D4A843] [&>option]:text-black"
+            className="w-full px-3 py-2.5 rounded-lg bg-white/10 border border-white/20 text-white text-sm focus:outline-none focus:border-[#D4A843] focus:bg-white/15 transition-all [&>option]:text-black"
           >
             <option value="all">All Types</option>
             {Object.entries(typeLabels).map(([key, label]) => (

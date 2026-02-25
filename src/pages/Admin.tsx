@@ -102,9 +102,9 @@ export default function Admin() {
 
 function DashCard({ label, value }: { label: string; value: string }) {
   return (
-    <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
-      <p className="text-3xl font-bold text-[#0C2340]">{value}</p>
-      <p className="text-gray-600 text-sm">{label}</p>
+    <div className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
+      <p className="text-4xl font-bold text-[#0C2340] mb-1">{value}</p>
+      <p className="text-gray-500 text-sm">{label}</p>
     </div>
   );
 }

@@ -16,11 +16,17 @@ export default function PropertyDetail() {
 
   return (
     <div className="pt-20 pb-10 px-4 max-w-6xl mx-auto">
-      <Link to="/properties" className="text-sm text-[#D4A843] hover:underline mb-4 inline-block">← Back to Properties</Link>
+      <Link to="/properties" className="text-sm text-[#D4A843] hover:text-[#c49a3a] transition-colors mb-6 inline-flex items-center gap-1.5 font-medium">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Back to Properties
+      </Link>
 
       <div className="grid lg:grid-cols-3 gap-8">
         <div className="lg:col-span-2">
-          <img src={property.images[0]} alt={property.title} className="w-full h-72 md:h-96 object-cover rounded-xl mb-6" />
+          <div className="relative overflow-hidden rounded-xl mb-6">
+            <img src={property.images[0]} alt={property.title} className="w-full h-72 md:h-96 object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+          </div>
 
           <div className="flex flex-wrap gap-2 mb-4">
             <span className="text-xs px-3 py-1 rounded-full text-white font-medium" style={{ backgroundColor: statusColors[property.status] }}>{statusLabels[property.status]}</span>
@@ -31,12 +37,12 @@ export default function PropertyDetail() {
           <p className="text-gray-500 mb-4">{property.address}</p>
           <p className="text-4xl font-bold text-[#0C2340] mb-6">{formatPrice(property.price)} <span className="text-lg font-normal text-gray-500">{property.currency}</span></p>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
-            <Stat label="Size" value={`${property.size_sqm} m²`} />
-            {property.land_size_sqm && <Stat label="Land" value={`${property.land_size_sqm} m²`} />}
-            {property.bedrooms != null && <Stat label="Bedrooms" value={String(property.bedrooms)} />}
-            {property.bathrooms != null && <Stat label="Bathrooms" value={String(property.bathrooms)} />}
-            {property.year_built && <Stat label="Year Built" value={String(property.year_built)} />}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+            <Stat label="Size" value={`${property.size_sqm} m²`} icon="📐" />
+            {property.land_size_sqm && <Stat label="Land" value={`${property.land_size_sqm} m²`} icon="🌿" />}
+            {property.bedrooms != null && <Stat label="Bedrooms" value={String(property.bedrooms)} icon="🛏" />}
+            {property.bathrooms != null && <Stat label="Bathrooms" value={String(property.bathrooms)} icon="🚿" />}
+            {property.year_built && <Stat label="Year Built" value={String(property.year_built)} icon="📅" />}
           </div>
 
           <h2 className="text-xl font-bold text-[#0C2340] mb-3">Description</h2>
@@ -49,8 +55,11 @@ export default function PropertyDetail() {
         </div>
 
         <div>
-          <div className="bg-gray-50 rounded-xl p-6 mb-6">
-            <h3 className="text-lg font-bold text-[#0C2340] mb-3">Agent</h3>
+          <div className="bg-gray-50 rounded-xl p-6 mb-6 border border-gray-100">
+            <h3 className="text-lg font-bold text-[#0C2340] mb-4 flex items-center gap-2">
+              <span className="w-8 h-8 bg-[#0C2340] text-white rounded-full flex items-center justify-center text-sm">👤</span>
+              Agent
+            </h3>
             <p className="font-semibold">{property.agent_name}</p>
             <p className="text-sm text-gray-600">{property.agent_phone}</p>
             <p className="text-sm text-gray-600 mb-4">{property.agent_email}</p>
@@ -59,8 +68,9 @@ export default function PropertyDetail() {
             </a>
           </div>
 
-          <div className="bg-[#0C2340] rounded-xl p-6 text-white">
-            <h3 className="text-lg font-bold mb-3">Interested?</h3>
+          <div className="bg-[#0C2340] rounded-xl p-6 text-white shadow-lg">
+            <h3 className="text-lg font-bold mb-1">Interested?</h3>
+            <p className="text-white/50 text-sm mb-4">Fill out the form and we'll get back to you.</p>
             <LeadForm propertyId={property.id} source="property_detail" />
           </div>
         </div>
@@ -78,11 +88,12 @@ export default function PropertyDetail() {
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Stat({ label, value, icon }: { label: string; value: string; icon?: string }) {
   return (
-    <div className="bg-gray-50 rounded-lg p-3 text-center">
-      <p className="text-xs text-gray-500">{label}</p>
-      <p className="font-bold text-[#0C2340]">{value}</p>
+    <div className="bg-gray-50 rounded-xl p-4 text-center border border-gray-100 hover:border-[#D4A843]/30 transition-colors">
+      {icon && <p className="text-lg mb-1">{icon}</p>}
+      <p className="font-bold text-[#0C2340] text-lg">{value}</p>
+      <p className="text-xs text-gray-400 uppercase tracking-wide mt-0.5">{label}</p>
     </div>
   );
 }

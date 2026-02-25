@@ -25,14 +25,14 @@ export default function Properties() {
     return list;
   }, [allProperties, type, status, sort, priceRange]);
 
-  const selectClass = "px-3 py-2 rounded-lg border border-gray-200 text-sm focus:border-[#D4A843] focus:ring-1 focus:ring-[#D4A843] outline-none bg-white";
+  const selectClass = "px-3 py-2.5 rounded-lg border border-gray-200 text-sm focus:border-[#D4A843] focus:ring-1 focus:ring-[#D4A843] outline-none bg-white transition-colors hover:border-gray-300 cursor-pointer";
 
   return (
     <div className="pt-20 pb-10 px-4 max-w-7xl mx-auto">
       <h1 className="text-3xl font-bold text-[#0C2340] mb-2">Properties in Playa Venao</h1>
-      <p className="text-gray-600 mb-6">{filtered.length} properties available</p>
+      <p className="text-gray-500 mb-8">{filtered.length} properties available</p>
 
-      <div className="flex flex-wrap gap-3 mb-8">
+      <div className="flex flex-wrap gap-3 mb-8 p-4 bg-gray-50 rounded-xl border border-gray-100">
         <select value={type} onChange={e => setType(e.target.value)} className={selectClass}>
           <option value="">All Types</option>
           {Object.entries(typeLabels).map(([k, v]) => <option key={k} value={k}>{v}</option>)}

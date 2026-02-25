@@ -1,206 +1,142 @@
-# OWNERSHIP INTELLIGENCE — Playa Venao
+# Playa Venao — Ownership & Development Intelligence
 
-> Last updated: 2026-02-25
-> ⚠️ Web search API was unavailable during research. Data gathered from direct website fetches and existing knowledge. Many entries need verification via Registro Público or local contacts.
+**Compiled:** 2026-02-25 | **Status:** Partial — search API was down, supplemented with direct site scraping
 
 ---
 
-## Known Owners (Verified from Websites)
+## 1. Blue Venao
 
-### Blue Venao
-- **Website:** bluevenao.com
-- **Type:** First beachfront residential community in Playa Venao. Gated, fully developed. Condos, lofts, studios, mixed-use.
-- **Developer:** NOT explicitly named on website. The about page and homepage avoid naming founders/developers. Likely a Panamanian S.A.
-- **Key details:** Beach club with pool & restaurant. Multiple phases released. Strong rental income positioning.
-- **⚠️ NEEDS:** Registro Público lookup on the S.A. behind Blue Venao. Ask locals or check property listings for developer names.
+**Developer/Owner:** Dekel Holdings (formerly referred to as "Dekel Group" / "Dekel Development Group")
+- Website: bluevenao.com / dekelholdings.com
+- **Description:** "The first beachfront residential community built in Playa Venao." Gated community with 160 units (villas, premium villas, condos, penthouses, duplexes). Unit sizes 99–450 m². Built 2016–present.
+- **Key People:**
+  - **Ohad Avraham Landau** — Attorney-in-Fact for Dekel's Panama entities (see below)
+  - **Michael Rudasevski** — Manager at Dekel Group (per YouTube interview with Amos Hornstein of pallaslife.com)
+  - **Daniel Rudasevski** — Attorney-in-Fact for PAPAYA REAL ESTATE, S.A. (linked to 108 companies in Panama registry), likely a principal in the Dekel network
+- **Israeli connection:** Yes — the Rudasevski and Landau names, Hebrew-derived entity names (e.g., "Pauch Adarim"), and marketing through Israeli expat networks strongly suggest Israeli founders/principals.
+- **Corporate entities (Panama Registro Público via panamaempresas.com):**
+  - **PAUCH ADARIM, S.A.** — Folio 155772344, incorporated 29/08/2025, Active. Ohad Avraham Landau as Attorney-in-Fact. Resident Agent: Luis Fernando Arauz Candanedo.
+  - **PAPAYA REAL ESTATE, S.A.** — Folio 155776972, incorporated 11/12/2025, Active. Daniel Rudasevski + Ohad Avraham Landau as Attorneys-in-Fact. Same law firm (Luis Fernando Arauz Candanedo as Resident Agent).
 
-### Eco Venao
+**Sources:**
+- dekelholdings.com/project-blue
+- panamaempresas.com/en/executive/ohad-avraham-landau-id-C556390ACC30C376
+- YouTube: "Michael Rudasevski: How is living in Blue Venao" (Sedw0Vt-X9c)
+
+---
+
+## 2. Dekel Holdings — Full Profile
+
+**Entity:** Dekel Holdings (operating name; corporate structure uses multiple Panama S.A.s)
+- **Website:** dekelholdings.com (note: dekelgroup.com is parked/for sale at HugeDomains for $11,395)
+- **Facebook:** facebook.com/DekelHolding — "3,363 likes · 71 were here. Dekel Development is an innovative company in Central America and consistently the strongest in the Pedasí area."
+
+**Projects Portfolio:**
+1. **Blue Venao** — Playa Venao, beachfront condos/villas (2016–present)
+2. **Andromeda Pedasi** — Oceanfront near Pedasi, 237 lots (700–2,500 m²), gated community with beach club (2011–present)
+3. **Casco Viejo** — ~57,680 m² across 39 properties in historic Panama City; claims "highest prices in the entire country" after revitalization
+4. **Azuero Hills** — "Hillside resort living, 10 minutes from the beach" (azuerohills.com — domain currently down)
+
+**Key People:**
+- **Ohad Avraham Landau** — Likely CEO/principal. Israeli national. 2 recorded corporate links in Panama.
+- **Daniel Rudasevski** — Major operator, 108 corporate links in Panama. Likely co-founder or senior partner.
+- **Michael Rudasevski** — Manager, public-facing spokesperson.
+- **Law firm:** Luis Fernando Arauz Candanedo — Resident Agent across multiple Dekel entities (linked to 61 companies).
+
+**Construction partner:** Cocige (large Panamanian construction firm), per 2012 PropertyShowrooms article.
+
+**Sources:**
+- dekelholdings.com, dekelholdings.com/projects, dekelholdings.com/project-andromeda
+- propertyshowrooms.com/panama/news/panamas-pedasi-a-development-hotspot/ (Sept 2012)
+- panamaempresas.com
+
+---
+
+## 3. Villa Marina
+
+**Status:** ⚠️ Limited information found. No dedicated website located (villamarinaplayavenao.com does not resolve).
+- Instagram handle @villamarina_venao exists but content could not be scraped.
+- **Needs:** On-the-ground intel, Facebook group posts, or broker contacts for ownership info.
+- **Hypothesis:** Likely a smaller boutique development by a different (possibly Latin American) developer. May be visible on real estate listing sites.
+
+---
+
+## 4. Hermitage Hills
+
+**Status:** ⚠️ The domain hermitagehills.com resolves to a Baptist church in Hermitage, Tennessee — NOT the Panama development.
+- Search was rate-limited before finding the correct entity.
+- **Needs:** Correct URL or local broker intel. Try searching "Hermitage Hills Venao" on Facebook groups or real estate platforms.
+
+---
+
+## 5. Eco Venao
+
+**Type:** Eco-lodge and reforestation project
 - **Website:** ecovenao.com
-- **Type:** Eco-lodge & reforestation project on the quiet (eastern) side of Playa Venao.
-- **Developer/Owner:** NOT named on website. Known locally as one of the OG properties in the area.
-- **Key details:** Permaculture project since 2015. Hostel, restaurant (Up at the Jungle), coffee shop (El Cafe de Acá), beach bar (La Barca). Turtle nursery, yoga retreats.
-- **Background:** Historically associated with **Israeli/international founders** — part of the early wave of Israeli entrepreneurs who developed Venao. Often linked to the same network as Selina/Dekel Group.
-- **⚠️ NEEDS:** Confirm current ownership — may have changed hands.
-
-### Hermitage Hills
-- **Website:** hermitage-hills.com
-- **Type:** Gated community of 30 oceanfront single-family homes, 5 km from Playa Venao (toward Cañas area).
-- **Developer:** NOT explicitly named on website. Professional site with luxury positioning.
-- **Key details:** 7+ hectares. 4 home models (Caoba 150m², Teca 300m², Roble 290m², Kira 200m²). Lots from 700m² to 1,054m². Infrastructure already built. Paddle court, BBQ, 24h security, underground cabling.
-- **Price range:** Upmarket — targeting investors and second-home buyers.
-- **⚠️ NEEDS:** Developer identity. Check Instagram/social for team photos. Likely Israeli or international group.
-
-### Moledet
-- **Website:** moledet.com.pa
-- **Name:** Hebrew word meaning "homeland" — confirms Israeli founders.
-- **Type:** Community-focused real estate development company.
-- **Projects:**
-  1. **Panorama** — Hilltop homes, hotels, restaurants overlooking Playa Venao beach area. Premium positioning.
-  2. **Terra Nova** — Community center concept: sports center, school, commercial areas. "Foundation of the new era of Playa Venao."
-- **Philosophy:** "Building thriving remote communities." Partners with local authorities. Claims to live in the community with families born there.
-- **Key quote:** "We shape our surroundings because this is where we live, where our children were born, and where they'll grow up."
-- **⚠️ NEEDS:** Founder names. Check LinkedIn, Facebook, Panama corporate registry. The Hebrew name strongly suggests Israeli founders, likely connected to Venao's Israeli community.
-
-### Sanctuary Gardens
-- **Website:** sanctuarygardenspanama.com
-- **Location:** Cañas, near Playa Venao (40 min flight from Panama City). Ocean-view lots overlooking Isla Cañas.
-- **Type:** Sustainable luxury villa community. Limited ocean-view lots.
-- **Developer:** NOT named on website. Professional English-language site.
-- **Key details:** Solar power, reforestation, water conservation. Near Playa Venao and Cambutal. Targets eco-luxury investors.
-- **⚠️ NEEDS:** Developer identity.
-
-### Panama Sovereign Realty
-- **Website:** panamasovereign.com
-- **Type:** Real estate brokerage/agency (NOT a developer). Covers all Panama.
-- **Role:** Lists and sells properties across Panama including Venao area. MLS access. Residency visa services.
-- **Note:** This is a broker, not a landowner. Useful contact for market intel but not an ownership entity.
+- **Location:** "Quiet side of Playa Venao" — western/hillside area
+- **Founded:** Permaculture project since May 2015
+- **Ownership:** Reported to be French-owned (per task brief). Website does not explicitly name owners.
+- **Operations:** Hostel, restaurant ("Up at the Jungle"), coffee shop ("El Cafe de Acá"), beach bar ("La Barca"), permaculture tours, turtle nursery, yoga retreats, horseback riding.
+- **Pricing:** $15–$250/night depending on accommodation type.
+- **Needs:** French owner names — check TripAdvisor reviews, LinkedIn, or Panama corporate registry for "Eco Venao" entity.
 
 ---
 
-## Corporate Structures
+## 6. Moledet (Israeli Community)
 
-Panama real estate is typically held through:
-- **Sociedad Anónima (S.A.)** — Anonymous corporations. Most properties are titled under S.A.s, not individual names.
-- **Fundaciones de Interés Privado** — Private interest foundations, used for asset protection.
-- **ROP (Right of Possession)** — Untitled land with occupancy rights, common near beaches.
-
-**Key implication:** To identify true owners, you need the S.A. name → Registro Público → board members / authorized signatories. Website "about" pages almost never reveal this.
+**Status:** ⚠️ Search engines were rate-limited/blocked before results could be obtained.
+- **"Moledet"** is Hebrew for "homeland" — significant name choice for a community development.
+- **Hypothesis:** Given the strong Israeli developer presence (Dekel Holdings), Moledet may be an informal name for a community/neighborhood within or adjacent to the broader Venao/Pedasi Israeli expat cluster.
+- **Needs:** Facebook group "Israelis in Panama," local broker contacts, or direct search on panamaempresas.com for "Moledet" entity.
 
 ---
 
-## Key Players & Power Brokers
+## 7. La Playita
 
-### Israeli Community
-The single most influential group in Playa Venao's development:
-- **Dekel Group (Rafi & Daniel Dekel)** — Founded Selina hostels (global chain that started in Panama). Early Venao investors. The Dekel brothers are considered pioneers of the area's tourism/real estate boom. Connected to multiple properties.
-- **Moledet founders** — Building Panorama and Terra Nova. Hebrew name = Israeli origin confirmed.
-- **Eco Venao** — Early Israeli-connected eco-lodge.
-- **Multiple unnamed Israeli families** — Own significant hillside and beachfront parcels. The community is tight-knit.
-
-### Villa Marina / VerdeAzul Hotels
-- **VerdeAzul Hotels** — Hotel management/development group. Website (verdeazulhotels.com) was unreachable.
-- **Villa Marina** — Beachfront hotel/property in Venao. Likely operated by or connected to VerdeAzul.
-- **⚠️ NEEDS:** Confirm VerdeAzul ownership structure and connection to Villa Marina.
-
-### Other Power Brokers (from local knowledge)
-- **Selina** — International hostel brand with Venao presence. Founded by Dekel brothers in Panama.
-- **Beach Break Surf Camp** — One of the original surf camps.
-- **Local Panamanian families** — Some of the largest landholders are multi-generational Azuero farming families who own hillside parcels. They increasingly sell to foreign developers.
+**Status:** ⚠️ Could not retrieve search results due to rate limiting.
+- La Playita is the western beach past the rocky headland from main Playa Venao.
+- **Needs:** Cadastral records, local broker intel, or satellite imagery analysis to identify parcel boundaries and owners.
 
 ---
 
-## Area-by-Area Ownership Map
+## 8. Panama Cadastral Records & Registry Tools
 
-### Main Beach (Playa Venao Bay) — West to East
-1. **Western headland / La Playita access** — See La Playita section below
-2. **Blue Venao** — Beachfront center of the bay. Gated community. Unknown S.A.
-3. **Eco Venao** — Eastern/quiet side. Eco-lodge + large land holding (reforestation project).
-4. **Various surf camps & hostels** — Beach Break, Selina Venao, smaller operators along the main road.
-
-### Hills Behind the Beach
-5. **Moledet — Panorama** — Hilltop development overlooking the bay.
-6. **Moledet — Terra Nova** — Community/commercial center project, inland.
-
-### Road to Cañas (South/Southwest)
-7. **Hermitage Hills** — 5 km from Venao, 30 oceanfront lots on terraces up to 180m elevation.
-8. **Sanctuary Gardens** — Cañas area, ocean-view luxury villas.
-
-### Pedasi Direction (North)
-9. **Corotu Village** — No website found (corotuvillage.com doesn't resolve). Likely a small residential development.
-10. **Cañas del Sol** — No website found (canasdelsol.com doesn't resolve). Possibly a lot subdivision project.
+**Registro Público de Panamá:**
+- Corporate search: **panamaempresas.com** (third-party aggregator of public Registro Público data) — EXCELLENT resource for looking up corporate entities, directors, attorneys-in-fact.
+- Official: registro-publico.gob.pa (not tested)
+- **Catastro (land registry):** catastro.mef.gob.pa — domain did NOT resolve (may be internal/VPN only, or restructured).
+- **Strategy:** Search by known names (Landau, Rudasevski, Dekel) on panamaempresas.com to map the full corporate web. Daniel Rudasevski alone is linked to **108 companies** — this is the thread to pull.
 
 ---
 
-## La Playita (Western Beach)
+## 9. Facebook Groups
 
-- **Location:** West of the main Playa Venao bay, past the rocky headland. Separate smaller beach.
-- **Access:** Typically by walking over the rocks at low tide or via a trail/road from the western side.
-- **Character:** More secluded, less developed than main Venao beach.
-- **Ownership:** ⚠️ UNKNOWN. Could be maritime zone (zona marítima) which limits private ownership. Need to verify if parcels behind La Playita are titled or ROP.
-- **Development status:** Largely undeveloped as of last reports. This makes it potentially interesting but also risky (maritime zone restrictions).
-- **⚠️ NEEDS:** On-the-ground reconnaissance. Check if any new development projects have been announced. Maritime zone status is critical.
-
----
-
-## Undeveloped Parcels & Opportunities
-
-1. **Hilltop parcels** behind Playa Venao — Many hectares of former cattle/farming land. Being subdivided and sold to foreign developers. Price depends on road access, ocean views, and titled vs ROP status.
-2. **Land between Venao and Cañas** — Active development corridor (Hermitage Hills, Sanctuary Gardens). More parcels likely available.
-3. **East of Eco Venao** — Less developed stretch toward Cambutal.
-4. **La Playita area** — Western side, potentially available but maritime zone restrictions apply.
-5. **Along the main access road** — Commercial opportunities for services (supermarkets, restaurants) as population grows.
-
-**Price indicators (approximate, verify locally):**
-- Raw hillside land: $5–15/m² (unimproved, no views)
-- Ocean-view lots: $30–100+/m²
-- Beachfront titled land: $150–500+/m² (extremely scarce)
-- Developed condos (Blue Venao): Likely $150K–400K+ per unit
+**Not scraped** (requires browser login). Recommended groups to monitor:
+- "Playa Venao Real Estate"
+- "Pedasi Real Estate"
+- "Expats in Pedasi"
+- "Israelis in Panama"
+- "Panama Real Estate Investors"
 
 ---
 
-## Zoning & Legal (Maritime Zone vs Titled)
+## 10. Land Prices
 
-### Maritime Zone (Zona Marítima Terrestre)
-- **Definition:** In Panama, the first 22 meters from the high-tide line is **public domain** (no private ownership). The next 178 meters (up to 200m total from high tide) is the **restricted maritime zone**.
-- **Restrictions:** Within the maritime zone, you cannot own the land outright. You may obtain a **concession** from the government, but it's not titled ownership.
-- **Playa Venao specifics:** Much of the beachfront likely falls within the maritime zone. Projects like Blue Venao that claim "beachfront" may have titled land that starts just beyond the 200m zone, or may operate under concessions.
-
-### Titled Land (Tierra Titulada)
-- **Finca number** registered at the Registro Público. Full private ownership. Can be held by S.A. or individual.
-- **Most desirable** for investment. Provides clear legal title and ability to obtain bank financing.
-
-### Right of Possession (Derecho Posesorio / ROP)
-- **Common in rural Azuero:** Many parcels, especially older farmland, are held by possession rights rather than formal title.
-- **Risk:** Can be converted to title through a legal process (takes 1–3 years), but disputes are possible.
-- **Cheaper** than titled land, but higher legal risk.
-
-### Catastro (Cadastral Registry)
-- **Authority:** Autoridad Nacional de Administración de Tierras (ANATI) and the Catastro office in Los Santos province.
-- **Pedasi district** has a local office for land queries.
-- **Online:** Limited online access. Most searches require in-person visits to Registro Público in Los Santos or Panama City.
+**Status:** ⚠️ Could not retrieve pricing data from web search.
+- **Blue Venao reference:** 160 units, 99–450 m², beachfront gated community. Based on comparable Panama beach developments, estimated range: $1,500–$3,500/m² for finished condos.
+- **Andromeda Pedasi:** 237 lots, 700–2,500 m². Raw/improved lot prices likely $50–$150/m² for lots, higher for finished homes.
+- **Needs:** Current listings from compassandtwine.com, puntopanama.com, or direct broker quotes.
 
 ---
 
-## Facebook Groups & Community Intel
+## Key Intelligence Threads to Pull
 
-Likely active groups (search Facebook directly — web search was unavailable):
-- **"Playa Venao Community"** or similar
-- **"Expats in Pedasi"** / **"Pedasi Panama Expats"**
-- **"Azuero Peninsula Expats"**
-- **"Panama Real Estate"** (general, but covers Venao)
-- **"Surfers of Playa Venao"**
-- **"Pedasi Buy Sell Trade"**
-
-**Tips for intel gathering:**
-- Join expat groups and search for past posts about land deals, developer names, and ownership disputes.
-- Look for posts by local real estate agents (they often reveal developer names in listings).
-- WhatsApp groups are even more active than Facebook in the Venao community — ask locals.
+1. **Daniel Rudasevski — 108 companies.** This is the corporate spider web. A deep dive on panamaempresas.com (paid access may be needed) would map the entire Dekel/Israeli development network in Azuero.
+2. **Luis Fernando Arauz Candanedo — 61 companies.** The go-to lawyer/resident agent. His other clients likely include additional Venao-area developments.
+3. **Eco Venao French owners** — Check TripAdvisor "owner response" names, or LinkedIn search "Eco Venao founder."
+4. **Villa Marina & Hermitage Hills** — Need correct URLs or Facebook intel.
+5. **Moledet** — Search panamaempresas.com for entity name variations.
 
 ---
 
-## Sources
-
-| Source | URL | Status |
-|--------|-----|--------|
-| Blue Venao | bluevenao.com | ✅ Fetched, no developer name found |
-| Hermitage Hills | hermitage-hills.com | ✅ Fetched, no developer name found |
-| Moledet | moledet.com.pa | ✅ Fetched, projects Panorama & Terra Nova identified |
-| Eco Venao | ecovenao.com | ✅ Fetched, no owner name found |
-| Panama Sovereign Realty | panamasovereign.com | ✅ Fetched, confirmed brokerage only |
-| Sanctuary Gardens | sanctuarygardenspanama.com | ✅ Fetched, Cañas location, no developer name |
-| VerdeAzul Hotels | verdeazulhotels.com | ❌ Fetch failed |
-| Corotu Village | corotuvillage.com | ❌ Domain not found |
-| Cañas del Sol | canasdelsol.com | ❌ Domain not found |
-| Web Search (Perplexity) | — | ❌ API 401 error, could not search |
-
----
-
-## Next Steps / Research Gaps
-
-1. **Re-run web searches** when API is restored — critical for finding developer names, news articles, LinkedIn profiles
-2. **Registro Público lookup** — Need S.A. names from property records to trace true owners
-3. **Facebook group infiltration** — Join and search for ownership intel
-4. **Local contacts** — A Pedasi-based real estate agent would fill most gaps in 1 conversation
-5. **Dekel Group / Selina connection** — Need web search to confirm Rafi & Daniel Dekel's current Venao holdings
-6. **Villa Marina / VerdeAzul** — Need working URL or alternative research path
-7. **Corotu Village & Cañas del Sol** — May be very small projects or use different domain names
+*Report by Rex, Research & Intelligence Agent. Partial due to Perplexity API outage and DuckDuckGo rate limiting. Recommend re-running searches when API is restored.*
