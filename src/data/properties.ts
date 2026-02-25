@@ -64,6 +64,7 @@ export const agents: Agent[] = [
   { id: '12', name: 'Love Your Land Panama', company: 'Love Your Land Panama', phone: '', email: 'info@loveyourlandpanama.com', website: 'https://loveyourlandpanama.com', properties_count: 6 },
   { id: '13', name: 'Open Doors Panama', company: 'Open Doors Panama', phone: '', email: 'info@opendoorspanama.com', website: 'https://opendoorspanama.com', properties_count: 1 },
   { id: '14', name: 'Dekel Group (Rafi & Daniel)', company: 'Dekel Group', phone: '', email: '', properties_count: 1 },
+  { id: '15', name: 'Moledet', company: 'Moledet', phone: '', email: '', website: 'https://moledet.com.pa', properties_count: 2 },
 ];
 
 // ============================================================
@@ -651,6 +652,30 @@ export const properties: Property[] = [
     images: ['https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800'],
     agent_name: 'Open Doors Panama', agent_phone: '', agent_email: 'info@opendoorspanama.com',
     source: 'Open Doors Panama', created_at: '2024-05-01'
+  },
+
+  // ══════════════════════════════════════════════════════════
+  // MOLEDET — Israeli Community Developers
+  // ══════════════════════════════════════════════════════════
+  {
+    id: '56', title: 'Panorama by Moledet — Hilltop Townhomes',
+    description: 'MAJOR PROJECT: Premium townhomes, hotels & restaurants on the hills above Playa Venao. Israeli community developers. World-class amenities.',
+    type: 'house', status: 'under_construction', price: 0, currency: 'USD',
+    size_sqm: 5000, land_size_sqm: 30000, lat: 7.4380, lng: -80.1930, address: 'Hills above Playa Venao',
+    owner: 'Moledet', notes: 'moledet.com.pa — Israeli founders living in Venao. Targeting premium investors. Hilltop development crowning the beach area.',
+    images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
+    agent_name: 'Moledet', agent_phone: '', agent_email: '',
+    source: 'moledet.com.pa', created_at: '2025-01-01'
+  },
+  {
+    id: '57', title: 'Terra Nova by Moledet — Community Center',
+    description: 'MAJOR PROJECT: Sport center, school, commercial areas. The community foundation for the new era of Playa Venao. Minutes from beach.',
+    type: 'commercial', status: 'under_construction', price: 0, currency: 'USD',
+    size_sqm: 10000, land_size_sqm: 50000, lat: 7.4400, lng: -80.1900, address: 'Inland near Playa Venao',
+    owner: 'Moledet', notes: 'moledet.com.pa — School, sports, commercial. For the growing international community. Calm area few minutes from beach.',
+    images: ['https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?w=800'],
+    agent_name: 'Moledet', agent_phone: '', agent_email: '',
+    source: 'moledet.com.pa', created_at: '2025-01-01'
   },
 ];
 
