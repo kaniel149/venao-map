@@ -6,6 +6,8 @@ export default function Insights() {
   const properties = getProperties();
   const forSale = properties.filter(p => p.status === 'for_sale');
   const underConstruction = properties.filter(p => p.status === 'under_construction');
+  const preSale = properties.filter(p => p.status === 'pre_sale');
+  const uniqueAgents = new Set(properties.map(p => p.agent_name).filter(a => a && a !== 'N/A')).size;
   const byType = (t: string) => forSale.filter(p => p.type === t);
   const priceRange = (list: typeof properties) => list.length ? `${formatPrice(Math.min(...list.map(p => p.price)))} - ${formatPrice(Math.max(...list.map(p => p.price)))}` : 'N/A';
 
@@ -15,10 +17,29 @@ export default function Insights() {
       <p className="text-slate-600 mb-8">Real estate intelligence for Playa Venao, Panama</p>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
-        <StatCard value="~800" label="Permanent Residents" sub="90% expats" />
-        <StatCard value="1,500-3K" label="High Season Visitors" sub="December - April" />
-        <StatCard value="15%+" label="Annual Growth Rate" sub="Property values" />
+        <StatCard value={String(properties.length)} label="Properties Tracked" sub={`${properties.filter(p => p.verified !== false).length} verified`} />
+        <StatCard value={String(uniqueAgents)} label="Agents & Sources" sub="Contributing data" />
+        <StatCard value={String(forSale.length)} label="For Sale" sub="Active listings" />
         <StatCard value={String(underConstruction.length)} label="Active Construction" sub="Projects underway" />
+      </div>
+
+      <h2 className="text-2xl font-bold text-[#0F172A] mb-4">Development Pipeline</h2>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10">
+        <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+          <p className="text-2xl mb-2">🏗</p>
+          <p className="font-bold text-[#0F172A]">Under Construction</p>
+          <p className="text-2xl font-bold text-[#D97706] mt-1">{underConstruction.length}</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+          <p className="text-2xl mb-2">📋</p>
+          <p className="font-bold text-[#0F172A]">Pre-Sale</p>
+          <p className="text-2xl font-bold text-[#D97706] mt-1">{preSale.length}</p>
+        </div>
+        <div className="bg-white border border-gray-100 rounded-xl p-5 shadow-sm">
+          <p className="text-2xl mb-2">📊</p>
+          <p className="font-bold text-[#0F172A]">Total Pipeline</p>
+          <p className="text-2xl font-bold text-[#D97706] mt-1">{underConstruction.length + preSale.length}</p>
+        </div>
       </div>
 
       <h2 className="text-2xl font-bold text-[#0F172A] mb-4">Property Prices by Type</h2>
@@ -58,7 +79,7 @@ export default function Insights() {
             <ul className="space-y-1">
               <li>• ~800 permanent residents (90% expats)</li>
               <li>• 1,500-3,000 visitors during high season</li>
-              <li>• 42+ businesses and growing</li>
+              <li>• {properties.length}+ properties tracked and growing</li>
               <li>• Property values up 15%+ annually</li>
               <li>• 4.5 hours from Panama City</li>
               <li>• Year-round warm weather (28-32°C)</li>

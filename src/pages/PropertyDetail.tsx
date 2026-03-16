@@ -50,7 +50,7 @@ export default function PropertyDetail() {
 
           <h2 className="text-xl font-bold text-[#0F172A] mb-3">Location</h2>
           <div className="h-64 rounded-xl overflow-hidden mb-8">
-            <PropertyMap properties={[property]} center={[property.lat, property.lng]} zoom={15} />
+            <PropertyMap properties={[property]} center={[property.lat, property.lng]} zoom={15} hideControls={true} />
           </div>
         </div>
 

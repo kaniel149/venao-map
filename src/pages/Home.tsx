@@ -91,8 +91,9 @@ export default function Home() {
         <div className="hidden md:block absolute bottom-0 left-0 right-0 z-10 bg-[#0F172A]/90 backdrop-blur-sm">
           <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-4">
             <div className="flex flex-wrap gap-6 text-white/90 text-sm">
-              <span><strong className="text-[#D97706]">42</strong> businesses</span>
-              <span><strong className="text-[#D97706]">1,500-3,000</strong> visitors/season</span>
+              <span><strong className="text-[#D97706]">{allProperties.length}</strong> properties tracked</span>
+              <span><strong className="text-[#D97706]">{allProperties.filter(p => p.verified !== false).length}</strong> verified</span>
+              <span><strong className="text-[#D97706]">{new Set(allProperties.map(p => p.agent_name).filter(a => a && a !== 'N/A')).size}</strong> agents/sources</span>
               <span><strong className="text-[#D97706]">{filtered.length}</strong> listings shown</span>
             </div>
             <a href="https://wa.me/50766196669" target="_blank" rel="noopener noreferrer" className="bg-[#25D366] text-white text-sm font-medium px-4 py-2 rounded-lg hover:bg-[#20bd5a] transition-colors flex items-center gap-2">

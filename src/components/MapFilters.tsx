@@ -28,7 +28,7 @@ export const defaultFilters: FilterState = {
   search: '',
 };
 
-export default function MapFilters({ filters, onChange, collapsed, onToggle, showParcels, onToggleParcels, showBuildings, onToggleBuildings }: Props) {
+export default function MapFilters({ filters, onChange, collapsed, onToggle, showParcels: _showParcels, onToggleParcels, showBuildings, onToggleBuildings }: Props) {
   const [, setLocalMax] = useState(String(filters.priceRange[1] >= MAX_PRICE ? '' : filters.priceRange[1]));
 
   const toggleStatus = (s: string) => {
@@ -122,6 +122,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
           <div>
             <p className="text-white/60 text-xs font-semibold mb-1.5 uppercase tracking-wide">Overlays</p>
             <div className="flex flex-col gap-1.5">
+              {/* Parcels toggle hidden — no real parcel data yet
               {onToggleParcels !== undefined && (
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
@@ -133,6 +134,7 @@ export default function MapFilters({ filters, onChange, collapsed, onToggle, sho
                   <span className="text-white/80 text-xs">Show Parcels</span>
                 </label>
               )}
+              */}
               {onToggleBuildings !== undefined && (
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input

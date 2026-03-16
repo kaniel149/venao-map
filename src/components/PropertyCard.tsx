@@ -14,6 +14,11 @@ export default function PropertyCard({ property: p }: { property: Property }) {
         <span className="absolute top-3 right-3 text-xs px-2.5 py-1 rounded-full bg-white/95 text-[#0F172A] font-semibold shadow-sm backdrop-blur-sm">
           {typeLabels[p.type]}
         </span>
+        {p.verified === false && (
+          <span className="absolute bottom-3 right-3 text-[10px] px-2 py-0.5 rounded bg-gray-500/80 text-white font-medium backdrop-blur-sm">
+            ⚠ Approx.
+          </span>
+        )}
       </div>
       <div className="p-5">
         <h3 className="font-semibold text-[#0F172A] mb-1 truncate text-base">{p.title}</h3>

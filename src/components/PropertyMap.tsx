@@ -42,9 +42,10 @@ interface Props {
   zoom?: number;
   showParcels?: boolean;
   showBuildings?: boolean;
+  hideControls?: boolean;
 }
 
-export default function PropertyMap({ properties, height = '100%', center = [7.4350, -80.1920], zoom = 14, showParcels = false, showBuildings = false }: Props) {
+export default function PropertyMap({ properties, height = '100%', center = [7.4350, -80.1920], zoom = 14, showParcels = false, showBuildings = false, hideControls = false }: Props) {
   const [showUnverified, setShowUnverified] = useState(false);
 
   const verifiedProperties = properties.filter(p => p.verified !== false);
@@ -52,8 +53,8 @@ export default function PropertyMap({ properties, height = '100%', center = [7.4
   const displayProperties = showUnverified ? properties : verifiedProperties;
 
   return (
-    <div style={{ height, width: '100%', position: 'relative' }}>
-      <div style={{
+    <div className="bg-[#1a1a2e]" style={{ height, width: '100%', position: 'relative' }}>
+      {!hideControls && <div style={{
         position: 'absolute', top: 10, left: 50, zIndex: 1000,
         background: showUnverified ? '#0F172A' : 'white',
         borderRadius: 8, padding: '8px 14px',
@@ -81,7 +82,7 @@ export default function PropertyMap({ properties, height = '100%', center = [7.4
           />
           Show unverified ({unverifiedProperties.length})
         </label>
-      </div>
+      </div>}
       <MapContainer center={center} zoom={zoom} style={{ height: '100%', width: '100%' }} scrollWheelZoom={true}>
         <LayersControl position="topright">
           <LayersControl.BaseLayer checked name="Satellite">
