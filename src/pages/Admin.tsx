@@ -3,7 +3,14 @@ import { getProperties, getLeads, deleteProperty, saveProperty } from '../data/s
 import { statusLabels, statusColors, typeLabels, formatPrice } from '../data/properties';
 import type { Property } from '../data/properties';
 
-const ADMIN_PASSWORD = 'venao2024';
+const ADMIN_HASH = '5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8'; // sha256
+
+async function checkPassword(input: string): Promise<boolean> {
+  const encoded = new TextEncoder().encode(input);
+  const hashBuffer = await crypto.subtle.digest('SHA-256', encoded);
+  const hashHex = Array.from(new Uint8Array(hashBuffer)).map(b => b.toString(16).padStart(2, '0')).join('');
+  return hashHex === ADMIN_HASH;
+}
 
 export default function Admin() {
   const [authed, setAuthed] = useState(false);
@@ -13,7 +20,7 @@ export default function Admin() {
 
   if (!authed) return (
     <div className="pt-24 flex items-center justify-center min-h-screen bg-gray-50">
-      <form onSubmit={e => { e.preventDefault(); if (password === ADMIN_PASSWORD) setAuthed(true); }} className="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full mx-4">
+      <form onSubmit={async e => { e.preventDefault(); if (await checkPassword(password)) setAuthed(true); }} className="bg-white rounded-xl p-8 shadow-lg max-w-sm w-full mx-4">
         <h1 className="text-2xl font-bold text-[#0F172A] mb-6 text-center">Admin Login</h1>
         <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:border-[#D97706] focus:ring-1 focus:ring-[#D97706] outline-none mb-4" />
         <button type="submit" className="w-full bg-[#0F172A] text-white font-semibold py-2.5 rounded-lg hover:bg-[#020617]">Login</button>
